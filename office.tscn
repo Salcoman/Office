@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=4 format=3 uid="uid://dds5gpo2llq1c"]
+
+[ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
+[ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
 
 [node name="Office" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_43ocd")
+
+[node name="Desk" parent="." instance=ExtResource("1_ei2s5")]
+
+[node name="Monitor" parent="." instance=ExtResource("2_u8nhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.404148, 4.49528, 0.274906)
