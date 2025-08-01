@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://bcf7yepuifll" path="res://Controllers/Scripts/player.gd" id="1_ui7yi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e7ebd"]
+margin = 0.0
+height = 4.39851
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ui7yi"]
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_ui7yi")
 CAMERA_CONTROLLER = NodePath("Camera3D")
 
@@ -14,10 +17,19 @@ CAMERA_CONTROLLER = NodePath("Camera3D")
 shape = SubResource("CapsuleShape3D_e7ebd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.825965, 0, 0, 0, 1.25897, 0, 0, 0, 0.79697, 0, 0.93627, 0)
+mesh = SubResource("CapsuleMesh_ui7yi")
+
+[node name="LEG" type="MeshInstance3D" parent="CollisionShape3D/MeshInstance3D"]
+transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, 0.337194, -1.289, 0)
+mesh = SubResource("CapsuleMesh_ui7yi")
+
+[node name="LEG2" type="MeshInstance3D" parent="CollisionShape3D/MeshInstance3D"]
+transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, -0.348, -1.289, 0)
 mesh = SubResource("CapsuleMesh_ui7yi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.525925, -0.161976)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.04332, -0.531961)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
