@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
-[ext_resource type="PackedScene" uid="uid://dtrk2pyl3q4pg" path="res://world_environment.tscn" id="4_43ocd"]
+[ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
 
