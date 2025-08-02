@@ -114,3 +114,8 @@ func _on_button_5_pressed() -> void:
 func _on_circuit_minimize_me() -> void:
 	desktop.set_deferred("visible",true)
 	circuit.set_deferred("visible",false)
+
+
+func _on_work_minimize_me() -> void:
+	desktop.set_deferred("visible",true)
+	work.set_deferred("visible",false)

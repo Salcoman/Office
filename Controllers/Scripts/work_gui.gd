@@ -7,6 +7,8 @@ var startTime : int = 0
 var broj : float = 0
 var preostaloVreme : float = 0
 
+signal minimize_me
+
 @onready var generated_number = $HBoxContainer/VBoxContainer/Label
 @onready var generated_number2 = $HBoxContainer/VBoxContainer/Label2
 @onready var generated_number3 = $HBoxContainer/VBoxContainer/Label3
@@ -131,3 +133,7 @@ func _on_button_pressed() -> void:
 	$Label.set_deferred("text", "Completed no. of entries: " + str(counter))
 	
 	
+
+
+func _on_minimized_pressed() -> void:
+	minimize_me.emit()

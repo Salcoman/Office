@@ -2,6 +2,37 @@
 
 [ext_resource type="PackedScene" uid="uid://b06u4x4sng54m" path="res://funny manager with anims2.glb" id="1_thfi8"]
 
+[sub_resource type="Animation" id="Animation_pwodx"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Root/Skeleton3D:Chest")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0118946, 1.00854e-08, 1.10452e-08, 0.999929)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Root/Skeleton3D:UpperChest")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.0491658, 2.67474e-10, -6.23697e-11, 0.998791)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Root/Skeleton3D:Neck")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.0765313, 0.0468313, -0.00359852, 0.99596)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Root/Skeleton3D:RightArm")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0.0902082, 0.839097, 0.503849, -0.184161)
+
 [sub_resource type="Animation" id="Animation_thfi8"]
 resource_name = "peek"
 tracks/0/type = "rotation_3d"
@@ -47,37 +78,6 @@ tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, 0.0902082, 0.839097, 0.503849, -0.184161, 1, 1, 0.0421432, 0.95652, 0.17817, -0.227046)
 
-[sub_resource type="Animation" id="Animation_pwodx"]
-length = 0.001
-tracks/0/type = "rotation_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Root/Skeleton3D:Chest")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.0118946, 1.00854e-08, 1.10452e-08, 0.999929)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Root/Skeleton3D:UpperChest")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.0491658, 2.67474e-10, -6.23697e-11, 0.998791)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Root/Skeleton3D:Neck")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0.0765313, 0.0468313, -0.00359852, 0.99596)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Root/Skeleton3D:RightArm")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0.0902082, 0.839097, 0.503849, -0.184161)
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hsutm"]
 _data = {
 &"RESET": SubResource("Animation_pwodx"),
@@ -103,6 +103,7 @@ bones/18/rotation = Quaternion(9.30155e-05, -8.25716e-08, 0.999999, -0.0014431)
 bones/18/scale = Vector3(1, 1, 1)
 bones/21/rotation = Quaternion(0.0118946, 1.00854e-08, 1.10452e-08, 0.999929)
 bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(0.0491658, 2.67474e-10, -6.23697e-11, 0.998791)
 bones/22/scale = Vector3(1, 1, 1)
 bones/23/rotation = Quaternion(0.0765313, 0.0468313, -0.00359852, 0.99596)
 bones/23/scale = Vector3(1, 1, 1)
