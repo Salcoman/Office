@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://tb0vv1e74hk6"]
 
-[ext_resource type="Script" path="res://circuit_track_interface.gd" id="1_lww7l"]
+[ext_resource type="Script" uid="uid://b4xy5iyseolbw" path="res://circuit_track_interface.gd" id="1_lww7l"]
 [ext_resource type="Texture2D" uid="uid://c172ja81jm4rd" path="res://Resources/SpriteSheets/spritesheet_tiles.png" id="1_qnq1p"]
 [ext_resource type="Texture2D" uid="uid://r4q67bqkj6ac" path="res://Resources/car_black_1.png" id="2_bisu7"]
 

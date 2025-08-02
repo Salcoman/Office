@@ -42,6 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func close_other_apps():
 	circuit.set_deferred("visible", false)
+	work.set_deferred("visible", false)
 
 func handle_mouse(event):
 	mesh_size = display.mesh.size
