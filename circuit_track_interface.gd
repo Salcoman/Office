@@ -44,7 +44,7 @@ func update_fan_cost():
 		$Button3.set_deferred("text", "Buy fans (∞$)")
 
 func _on_buy_pressed() -> void:
-	if score > car_cost:
+	if score >= car_cost:
 		var car_instance = car.instantiate()
 		add_child(car_instance)
 		car_instance.position = starting_position
@@ -62,7 +62,7 @@ func _on_marketing_pressed() -> void:
 
 
 func _on_fans_pressed() -> void:
-	if score > fan_cost:
+	if score >= fan_cost:
 		if number_of_fans != 4:
 			var fan_instance = fan.instantiate()
 			add_child(fan_instance)
