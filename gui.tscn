@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://d08pfsg3p5i45"]
+[gd_scene load_steps=6 format=3 uid="uid://bcdcwrjyw0w8e"]
 
-[ext_resource type="PackedScene" uid="uid://dmr3qmh1e23a4" path="res://gui_interface_control.tscn" id="1_80edf"]
+[ext_resource type="PackedScene" path="res://gui_interface_control.tscn" id="1_80edf"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6lon5"]
 viewport_path = NodePath("SubViewport")
