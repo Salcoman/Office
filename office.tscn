@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=10 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://monitor 3.glb" id="5_lcnwv"]
+[ext_resource type="Material" uid="uid://c51gg4ox246d0" path="res://Resources/Materials/desk_mat.tres" id="7_4i814"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lcnwv"]
 
 [node name="Office" type="Node3D"]
 
@@ -17,9 +20,10 @@
 shape = SubResource("WorldBoundaryShape3D_43ocd")
 
 [node name="Desk" parent="." instance=ExtResource("1_ei2s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.443251, 0, 0)
 
 [node name="Monitor" parent="." instance=ExtResource("2_u8nhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.404148, 4.49528, 0.274906)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0391032, 4.49528, 0.274906)
 visible = false
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("4_43ocd")]
@@ -32,5 +36,22 @@ transform = Transform3D(0.955195, 0, 0, 0, 1.74131, 0, 0, 0, 1.74131, 0.803435, 
 
 [node name="GUI" parent="monitor 3" instance=ExtResource("3_hsito")]
 transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908e-09, 0.444051, -0.0889304, -0.0162989)
+
+[node name="zid" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 11, -2.97361, 4.59336, -0.929929)
+material_override = ExtResource("7_4i814")
+mesh = SubResource("BoxMesh_lcnwv")
+
+[node name="zid2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0, -11, 0, 10, 0, 0.5, 0, -4.80825e-07, 2.26821, 4.59336, -6.66826)
+mesh = SubResource("BoxMesh_lcnwv")
+
+[node name="zid4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-08, 0, -11, 0, 10, 0, 0.5, 0, -4.80825e-07, 2.26821, 4.59336, 9.90604)
+mesh = SubResource("BoxMesh_lcnwv")
+
+[node name="zid3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.5, 0, 2.56693e-06, 0, 10, 0, -7.54979e-08, 0, -17, 7.49845, 4.59336, 1.6751)
+mesh = SubResource("BoxMesh_lcnwv")
 
 [editable path="Monitor"]
