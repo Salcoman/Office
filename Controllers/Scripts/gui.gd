@@ -106,5 +106,5 @@ func find_mouse(pos: Vector2):
 
 
 func _on_button_5_pressed() -> void:
-	$SubViewport/Control.set_deferred("visible",false)
-	$SubViewport/Control2.set_deferred("visible",true)
+	desktop.set_deferred("visible",false)
+	circuit.set_deferred("visible",true)
