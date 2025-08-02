@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcdcwrjyw0w8e"]
+[gd_scene load_steps=8 format=3 uid="uid://bcdcwrjyw0w8e"]
 
 [ext_resource type="PackedScene" uid="uid://d1oe38id0vei8" path="res://gui_interface_control.tscn" id="1_80edf"]
 [ext_resource type="Script" uid="uid://b0dx5usbvjq31" path="res://Controllers/Scripts/gui.gd" id="1_cweje"]
+[ext_resource type="PackedScene" uid="uid://tb0vv1e74hk6" path="res://circuit_track_interface.tscn" id="3_l35td"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6lon5"]
 viewport_path = NodePath("SubViewport")
@@ -34,6 +35,10 @@ shape = SubResource("BoxShape3D_80edf")
 
 [node name="Control" parent="SubViewport" instance=ExtResource("1_80edf")]
 
+[node name="Control2" parent="SubViewport" instance=ExtResource("3_l35td")]
+visible = false
+
 [connection signal="pressed" from="SubViewport/Control/VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SubViewport/Control/VBoxContainer/GridContainer/Button5" to="." method="_on_button_5_pressed"]
 
 [editable path="SubViewport/Control"]
