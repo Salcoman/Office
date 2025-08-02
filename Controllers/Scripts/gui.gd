@@ -109,3 +109,8 @@ func find_mouse(pos: Vector2):
 func _on_button_5_pressed() -> void:
 	desktop.set_deferred("visible",false)
 	circuit.set_deferred("visible",true)
+
+
+func _on_circuit_minimize_me() -> void:
+	desktop.set_deferred("visible",true)
+	circuit.set_deferred("visible",false)

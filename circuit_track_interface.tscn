@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://tb0vv1e74hk6"]
+[gd_scene load_steps=12 format=4 uid="uid://tb0vv1e74hk6"]
 
 [ext_resource type="Script" uid="uid://b4xy5iyseolbw" path="res://circuit_track_interface.gd" id="1_lww7l"]
 [ext_resource type="Texture2D" uid="uid://c172ja81jm4rd" path="res://Resources/SpriteSheets/spritesheet_tiles.png" id="1_qnq1p"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://capt4e1v53v1b" path="res://Resources/UI/wallpaperAliens.jpg" id="5_gydxg"]
 [ext_resource type="Texture2D" uid="uid://dcbkxm4is1nl6" path="res://Resources/UI/Icons/button_square_depth.png" id="6_3heh2"]
 [ext_resource type="AudioStream" uid="uid://c34fq11t3ai7k" path="res://Resources/audio/jingles-saxophone_00.ogg" id="7_3heh2"]
+[ext_resource type="Texture2D" uid="uid://bk8iholmx8jh2" path="res://Resources/Sprites/minus.png" id="8_2jfnm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bisu7"]
 resource_name = "Circuit"
@@ -352,9 +353,9 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="WindowHead"]
 layout_mode = 0
-offset_top = -74.0175
-offset_right = 1200.0
-offset_bottom = 15.9825
+offset_top = -74.0
+offset_right = 1152.0
+offset_bottom = 16.0
 color = Color(0.129492, 0.365382, 1, 1)
 
 [node name="Score" type="Label" parent="WindowHead"]
@@ -396,10 +397,10 @@ text = "Buy Car (1$)"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 429.0
-offset_top = 712.0
-offset_right = 717.0
-offset_bottom = 784.0
+offset_left = 528.345
+offset_top = 711.823
+offset_right = 895.345
+offset_bottom = 783.823
 scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("2_1j2kh")
 theme_override_font_sizes/font_size = 28
@@ -465,8 +466,17 @@ icon_alignment = 1
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("7_3heh2")
 
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1086.17
+offset_top = -64.0394
+offset_right = 1144.17
+offset_bottom = -6.03941
+icon = ExtResource("8_2jfnm")
+
 [connection signal="area_entered" from="FinishLine" to="." method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_marketing_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_fans_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_confirm_win"]
+[connection signal="pressed" from="Button4" to="." method="_on_minimize_pressed"]

@@ -4,6 +4,8 @@ extends Control
 
 @onready var score_label = $WindowHead/Score
 
+signal minimize_me
+
 var starting_position : Vector2 = Vector2(67.0,311.0)
 var car = preload("res://Controllers/circuit_car.tscn")
 var fan = preload("res://Controllers/fan.tscn")
@@ -102,3 +104,7 @@ func place_fan(fan : Fan):
 func _confirm_win() -> void:
 	$CenterContainer.set_deferred("visible",false)
 	$AudioStreamPlayer3D.play()
+
+
+func _on_minimize_pressed() -> void:
+	minimize_me.emit()
