@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcdcwrjyw0w8e"]
+[gd_scene load_steps=7 format=3 uid="uid://bcdcwrjyw0w8e"]
 
 [ext_resource type="PackedScene" uid="uid://d1oe38id0vei8" path="res://gui_interface_control.tscn" id="1_80edf"]
+[ext_resource type="Script" uid="uid://b0dx5usbvjq31" path="res://Controllers/Scripts/gui.gd" id="1_cweje"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_6lon5"]
 viewport_path = NodePath("SubViewport")
@@ -16,12 +17,14 @@ albedo_texture = SubResource("ViewportTexture_6lon5")
 size = Vector3(1, 1, 0.0556641)
 
 [node name="GUI" type="Node3D"]
+script = ExtResource("1_cweje")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_q8o8l")
 mesh = SubResource("QuadMesh_k6omp")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00803447)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0239264)
@@ -30,3 +33,7 @@ shape = SubResource("BoxShape3D_80edf")
 [node name="SubViewport" type="SubViewport" parent="."]
 
 [node name="Control" parent="SubViewport" instance=ExtResource("1_80edf")]
+
+[connection signal="pressed" from="SubViewport/Control/VBoxContainer/GridContainer/Button" to="." method="_on_button_pressed"]
+
+[editable path="SubViewport/Control"]

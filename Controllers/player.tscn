@@ -14,6 +14,7 @@ script = ExtResource("1_ui7yi")
 CAMERA_CONTROLLER = NodePath("Camera3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.724964, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_e7ebd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
@@ -29,25 +30,4 @@ transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, -0.348, -1.289,
 mesh = SubResource("CapsuleMesh_ui7yi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.04332, -0.531961)
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2.5
-offset_top = -2.5
-offset_right = 2.5
-offset_bottom = 2.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control"]
-layout_mode = 0
-offset_right = 5.0
-offset_bottom = 5.0
-mouse_filter = 2
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.08863, -0.531961)
