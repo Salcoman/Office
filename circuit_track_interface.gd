@@ -50,6 +50,7 @@ func _on_buy_pressed() -> void:
 		var car_instance = car.instantiate()
 		add_child(car_instance)
 		car_instance.position = starting_position
+		$CarEngine.play()
 		update_score(-car_cost)
 		update_car_cost()
 
@@ -103,7 +104,7 @@ func place_fan(fan : Fan):
 
 func _confirm_win() -> void:
 	$CenterContainer.set_deferred("visible",false)
-	$AudioStreamPlayer3D.play()
+	$VictoryJingle.play()
 
 
 func _on_minimize_pressed() -> void:
