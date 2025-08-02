@@ -1,0 +1,269 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc652vkdxabww"]
+
+[ext_resource type="Script" uid="uid://dftc27ctfagvj" path="res://Controllers/Scripts/work_gui.gd" id="1_wwjg2"]
+[ext_resource type="LabelSettings" uid="uid://kq6kb3fi07qg" path="res://Resources/ugly_label_settings.tres" id="2_x3tp6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wwjg2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label2"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label3"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect4" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label4"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect5" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label5"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="Label6" type="Label" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+label_settings = ExtResource("2_x3tp6")
+
+[node name="ReferenceRect6" type="ReferenceRect" parent="HBoxContainer/VBoxContainer/Label6"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+border_color = Color(0, 1, 0, 1)
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Label6" type="Label" parent="HBoxContainer/VBoxContainer4"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+text = "------->"
+label_settings = ExtResource("2_x3tp6")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="LineEdit2" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit2"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="LineEdit3" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit3"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="LineEdit4" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect4" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit4"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="LineEdit5" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect5" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit5"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="LineEdit6" type="LineEdit" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="ReferenceRect6" type="ReferenceRect" parent="HBoxContainer/VBoxContainer2/LineEdit6"]
+layout_mode = 2
+offset_right = 200.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+editor_only = false
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="HBoxContainer/VBoxContainer3"]
+custom_minimum_size = Vector2(68, 31)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 15.0
+offset_top = 312.0
+offset_right = 215.0
+offset_bottom = 335.0
+text = "Completed no. of entries: "
+label_settings = ExtResource("2_x3tp6")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 280.0
+offset_right = 78.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0.607843, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+text = "Submit"
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="Button"]
+layout_mode = 2
+offset_right = 68.0
+offset_bottom = 31.0
+mouse_filter = 1
+border_color = Color(0, 1, 0, 1)
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

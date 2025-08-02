@@ -4,6 +4,10 @@ extends Node3D
 @onready var viewport = $SubViewport
 @onready var area = $Area3D
 
+@onready var desktop = $SubViewport/Desktop
+@onready var circuit = $SubViewport/Circuit
+@onready var work = $SubViewport/Work
+
 var mesh_size = Vector2()
 var mouse_entered = false
 var mouse_held = false
@@ -12,12 +16,19 @@ var mouse_inside = false
 var last_mouse_pos_3D = null
 var last_mouse_pos_2D = null
 
+
+func _input(event: InputEvent) -> void:
+	if event.is_action("return_to_desktop"):
+		desktop.set_deferred("visible",true)
+		close_other_apps()
+
 func _ready() -> void:
 	area.mouse_entered.connect(func(): mouse_entered = true)
 	viewport.set_process_input(true)
 
 func _on_button_pressed():
-	print("Button pressed")
+	desktop.set_deferred("visible",false)
+	work.set_deferred("visible",true)
 
 func _unhandled_input(event: InputEvent) -> void:
 	var is_mouse_event = false
@@ -28,7 +39,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		handle_mouse(event)
 	elif not is_mouse_event:
 		viewport.push_input(event,true)
-		
+
+func close_other_apps():
+	circuit.set_deferred("visible", false)
+
 func handle_mouse(event):
 	mesh_size = display.mesh.size
 	
