@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=24 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://monitor 3.glb" id="5_lcnwv"]
 [ext_resource type="Texture2D" uid="uid://ru1os3bv1dqr" path="res://Resources/Sprites/walltexture.png" id="7_wruqr"]
 [ext_resource type="Texture2D" uid="uid://dnlom5lgc8wsi" path="res://Resources/Sprites/floor_tiles.png" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://c6q3nrxud0yda" path="res://Models/ram za sliku.blend" id="9_lcwox"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
 
@@ -120,6 +121,7 @@ mesh = SubResource("BoxMesh_s0aar")
 
 [node name="Plafon" type="MeshInstance3D" parent="."]
 transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 9.74778, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_knsl5")
 lod_bias = 0.001
 mesh = SubResource("BoxMesh_s0aar")
@@ -154,5 +156,8 @@ mesh = SubResource("BoxMesh_lcnwv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="zid6/StaticBody3D"]
 shape = SubResource("BoxShape3D_s0aar")
+
+[node name="ram za sliku" parent="." instance=ExtResource("9_lcwox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71049, 6.4336, 1.90804)
 
 [editable path="Monitor"]
