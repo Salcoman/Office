@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt3b46l5fcr1l"]
+
+[ext_resource type="Texture2D" uid="uid://r4q67bqkj6ac" path="res://Resources/car_black_1.png" id="1_cxbed"]
+[ext_resource type="Script" uid="uid://cypxpudwp2uus" path="res://Controllers/Scripts/circuit_car.gd" id="2_asab2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asab2"]
+radius = 33.8004
+height = 125.458
+
+[sub_resource type="Animation" id="Animation_asab2"]
+resource_name = "loop"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 4, 5, 6, 7.5, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(67, 311), Vector2(67, 62), Vector2(576, 62), Vector2(1085, 62), Vector2(1085, 311), Vector2(1085, 577), Vector2(576, 577), Vector2(67, 577), Vector2(62, 311)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 4, 5, 6, 7.5, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.872665, 1.5708, 1.5708, 3.14159, 3.76991, 4.71239, 5.65487, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_j8fod"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(67, 311)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0jeag"]
+_data = {
+&"RESET": SubResource("Animation_j8fod"),
+&"loop": SubResource("Animation_asab2")
+}
+
+[node name="Car" type="Sprite2D"]
+position = Vector2(67, 311)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cxbed")
+script = ExtResource("2_asab2")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_asab2")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0jeag")
+}
