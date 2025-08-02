@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://dojdfc42oti4a"]
+
+[ext_resource type="PackedScene" uid="uid://d1kqmc11i40cs" path="res://Models/funny manager with anims.glb" id="1_v2hbd"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="funny manager with anims" parent="." instance=ExtResource("1_v2hbd")]
+
+[node name="Skeleton3D" parent="funny manager with anims/Root" index="0"]
+bones/0/position = Vector3(0.302855, 0.193205, -0.14881)
+bones/0/rotation = Quaternion(-0.707107, 9.05624e-08, 0.707107, -4.52812e-08)
+bones/1/rotation = Quaternion(-0.507509, 0.508223, -0.491912, -0.492105)
+bones/2/rotation = Quaternion(0.0157269, -0.00207817, 0.994625, -0.102321)
+bones/3/rotation = Quaternion(0.946129, -0.0218708, 0.0755026, -0.314104)
+bones/7/rotation = Quaternion(-0.707107, 1.25133e-07, 0.707107, -1.25133e-07)
+bones/9/position = Vector3(-0.302373, 0.193205, -0.14881)
+bones/9/rotation = Quaternion(-0.707107, 9.05531e-08, 0.707107, -4.52766e-08)
+bones/10/rotation = Quaternion(-0.50769, 0.507905, -0.491725, -0.492433)
+bones/12/rotation = Quaternion(0.948112, 0.0114449, -0.0440929, -0.314656)
+bones/14/rotation = Quaternion(-0.5, -0.5, 0.5, -0.5)
+bones/16/rotation = Quaternion(-0.707107, 1.25133e-07, 0.707107, -1.25133e-07)
+bones/18/rotation = Quaternion(9.30153e-05, -6.39399e-09, 0.999999, -0.00144307)
+bones/23/rotation = Quaternion(0.0766158, 5.10965e-10, 5.33659e-11, 0.997061)
+bones/26/position = Vector3(0.0882801, 0.281082, 0.0649611)
+bones/26/rotation = Quaternion(0.586882, 0.410653, 0.548295, -0.431632)
+bones/27/rotation = Quaternion(0.08389, 0.710813, 0.0613101, 0.695664)
+bones/28/rotation = Quaternion(0.0467615, 0.0125739, 0.00544681, 0.998812)
+bones/34/rotation = Quaternion(-0.336073, 0.630712, 0.446928, 0.538064)
+bones/38/position = Vector3(2.69381e-08, 0.258802, 4.55985e-07)
+bones/38/rotation = Quaternion(-0.000935271, 0.964877, -0.103902, -0.241281)
+bones/39/position = Vector3(-6.23679e-08, 0.470775, -6.25775e-07)
+bones/39/rotation = Quaternion(0.000733782, -0.00476747, 0.0470719, 0.99888)
+bones/39/scale = Vector3(1, 1, 1)
+bones/45/rotation = Quaternion(-0.358374, 0.729597, -0.429253, -0.393699)
+bones/48/rotation = Quaternion(0.997211, 0.0694032, -0.0210528, -0.0175984)
+bones/49/rotation = Quaternion(0.114217, 0.0325762, 0.0426413, 0.992006)
+bones/50/rotation = Quaternion(-0.554441, -0.0467145, -0.060194, 0.828728)
+bones/50/scale = Vector3(1, 1, 1)
+bones/53/rotation = Quaternion(0.997152, -0.0685442, -0.0237079, -0.0206942)
+bones/54/rotation = Quaternion(0.112169, 0.0115569, -0.0477685, 0.992473)
+bones/55/rotation = Quaternion(-0.556114, 0.0745019, 0.042005, 0.826693)
+bones/56/rotation = Quaternion(0.0282605, 0.953941, -0.297574, -0.0254451)
+
+[editable path="funny manager with anims"]
