@@ -101,3 +101,4 @@ func place_fan(fan : Fan):
 
 func _confirm_win() -> void:
 	$CenterContainer.set_deferred("visible",false)
+	$AudioStreamPlayer3D.play()

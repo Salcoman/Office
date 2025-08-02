@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://tb0vv1e74hk6"]
+[gd_scene load_steps=11 format=4 uid="uid://tb0vv1e74hk6"]
 
 [ext_resource type="Script" uid="uid://b4xy5iyseolbw" path="res://circuit_track_interface.gd" id="1_lww7l"]
 [ext_resource type="Texture2D" uid="uid://c172ja81jm4rd" path="res://Resources/SpriteSheets/spritesheet_tiles.png" id="1_qnq1p"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cqe0rxyeyl1cr" path="res://Resources/Sprites/road_dirt69.png" id="3_lww7l"]
 [ext_resource type="Texture2D" uid="uid://capt4e1v53v1b" path="res://Resources/UI/wallpaperAliens.jpg" id="5_gydxg"]
 [ext_resource type="Texture2D" uid="uid://dcbkxm4is1nl6" path="res://Resources/UI/Icons/button_square_depth.png" id="6_3heh2"]
+[ext_resource type="AudioStream" uid="uid://c34fq11t3ai7k" path="res://Resources/audio/jingles-saxophone_00.ogg" id="7_3heh2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bisu7"]
 resource_name = "Circuit"
@@ -460,6 +461,9 @@ text = "ok"
 icon = ExtResource("6_3heh2")
 flat = true
 icon_alignment = 1
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_3heh2")
 
 [connection signal="area_entered" from="FinishLine" to="." method="_on_area_2d_area_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_buy_pressed"]
