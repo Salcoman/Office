@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=7 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
+[ext_resource type="PackedScene" uid="uid://bcdcwrjyw0w8e" path="res://gui.tscn" id="3_hsito"]
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
 
@@ -23,3 +24,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.404148, 4.49528, 0.274906)
 
 [node name="Player" parent="." instance=ExtResource("3_u8nhc")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 4.01722, 3.13815, 0)
+
+[node name="GUI" parent="Monitor" instance=ExtResource("3_hsito")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.814153, 0, 0)
+
+[editable path="Monitor"]
+
