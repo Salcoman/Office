@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=13 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
@@ -6,26 +6,12 @@
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://monitor 3.glb" id="5_lcnwv"]
-[ext_resource type="Texture2D" uid="uid://vbopqhnhr0fv" path="res://Resources/Sprites/BEIGE.jpeg" id="7_4i814"]
+[ext_resource type="Material" uid="uid://dsnnf8e68uh27" path="res://Resources/Materials/beige_wall.tres" id="7_wruqr"]
 [ext_resource type="Texture2D" uid="uid://dnlom5lgc8wsi" path="res://Resources/Sprites/floor_tiles.png" id="8_wruqr"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wruqr"]
-albedo_texture = ExtResource("7_4i814")
-
 [sub_resource type="BoxMesh" id="BoxMesh_lcnwv"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcwox"]
-albedo_texture = ExtResource("7_4i814")
-uv1_scale = Vector3(2, 2, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xqf3"]
-albedo_texture = ExtResource("7_4i814")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70x1r"]
-albedo_texture = ExtResource("7_4i814")
-uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knsl5"]
 albedo_texture = ExtResource("8_wruqr")
@@ -60,22 +46,22 @@ transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908
 
 [node name="zid" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.5, 0, -9.61651e-07, 0, 10, 0, 4.37114e-08, 0, -11, -2.97361, 4.59336, -0.929929)
-material_override = SubResource("StandardMaterial3D_wruqr")
+material_override = ExtResource("7_wruqr")
 mesh = SubResource("BoxMesh_lcnwv")
 
 [node name="zid2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2.18557e-08, 0, 11, 0, 10, 0, -0.5, 0, -4.80825e-07, 2.26821, 4.59336, -6.66826)
-material_override = SubResource("StandardMaterial3D_lcwox")
+material_override = ExtResource("7_wruqr")
 mesh = SubResource("BoxMesh_lcnwv")
 
 [node name="zid4" type="MeshInstance3D" parent="."]
 transform = Transform3D(-2.18557e-08, 0, -11, 0, 10, 0, 0.5, 0, -4.80825e-07, 2.26821, 4.59336, 9.90604)
-material_override = SubResource("StandardMaterial3D_3xqf3")
+material_override = ExtResource("7_wruqr")
 mesh = SubResource("BoxMesh_lcnwv")
 
 [node name="zid3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 7.49845, 4.59336, 1.6751)
-material_override = SubResource("StandardMaterial3D_70x1r")
+material_override = ExtResource("7_wruqr")
 mesh = SubResource("BoxMesh_lcnwv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
