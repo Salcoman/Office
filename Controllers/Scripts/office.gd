@@ -74,3 +74,10 @@ func _on_izadji_napolje_body_exited(body: Node3D) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action("otvori") and izlazStanje:
 		vrataAnimacija.play("otvori_se")
+
+
+
+func _on_exit_game_body_entered(body: Node3D) -> void:
+	if body.is_in_group("igrac"):
+		print("cao")
+		get_tree().quit()

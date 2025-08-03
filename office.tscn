@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=35 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -64,6 +64,9 @@ size = Vector3(3.919, 2.784, 7.905)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uxut"]
 size = Vector3(1, 1.99121, 1.32178)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1y4y"]
+size = Vector3(0.755371, 1, 1.06165)
 
 [node name="Office" type="Node3D"]
 script = ExtResource("1_70x1r")
@@ -360,6 +363,13 @@ shadow_enabled = true
 omni_range = 10.69
 omni_attenuation = 0.191
 
+[node name="ExitGame" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5434, 2.62571, -8.18678)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitGame"]
+transform = Transform3D(9.8, 0, 0, 0, 7, 0, 0, 0, 14, 0.667114, 0, 0.340957)
+shape = SubResource("BoxShape3D_n1y4y")
+
 [connection signal="work_failed" from="predmeti/monitor 3/GUI" to="." method="_on_work_failed"]
 [connection signal="work_work" from="predmeti/monitor 3/GUI" to="." method="_on_gui_work_work"]
 [connection signal="done_listening" from="Player" to="." method="_on_player_done_listening"]
@@ -367,6 +377,7 @@ omni_attenuation = 0.191
 [connection signal="animation_finished" from="TheMenager/funny manager with anims2/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
 [connection signal="body_entered" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_entered"]
 [connection signal="body_exited" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_exited"]
+[connection signal="body_entered" from="ExitGame" to="." method="_on_exit_game_body_entered"]
 
 [editable path="predmeti/Desk"]
 [editable path="predmeti/Monitor"]

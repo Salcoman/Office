@@ -36,7 +36,7 @@ stream_2/stream = ExtResource("5_7w48v")
 stream_3/stream = ExtResource("6_33e1e")
 stream_4/stream = ExtResource("7_iw1xq")
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER") groups=["igrac"]]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("1_ui7yi")
 CAMERA_CONTROLLER = NodePath("Camera3D")
