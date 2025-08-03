@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://umiqcsx4n0xe"]
+
+[ext_resource type="PackedScene" uid="uid://bwdktsj3vqs58" path="res://Models/stolica.blend" id="1_q435q"]
+[ext_resource type="Texture2D" uid="uid://cdag1mh8m6p5h" path="res://Resources/oak-3275-mm-architextures.jpg" id="2_eum5e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vohme"]
+albedo_texture = ExtResource("2_eum5e")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="stolica" parent="." instance=ExtResource("1_q435q")]
+
+[node name="Cube" parent="stolica" index="0"]
+material_override = SubResource("StandardMaterial3D_vohme")
+
+[editable path="stolica"]

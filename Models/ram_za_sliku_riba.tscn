@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://pxexlh7snqtq"]
+
+[ext_resource type="PackedScene" uid="uid://c6q3nrxud0yda" path="res://Models/ram za sliku.blend" id="1_rujir"]
+[ext_resource type="Texture2D" uid="uid://dv40vevpumjt3" path="res://Resources/Sprites/framed_catfish0.5x.png" id="2_p7rqs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fomjc"]
+albedo_texture = ExtResource("2_p7rqs")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1sg6n"]
+
+[node name="ram za sliku" instance=ExtResource("1_rujir")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(-3.0598e-08, 0, 1, 0, 1.4, 0, -0.7, 0, -4.37114e-08, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_fomjc")
+mesh = SubResource("QuadMesh_1sg6n")
