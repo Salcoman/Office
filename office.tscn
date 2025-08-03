@@ -185,9 +185,17 @@ transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -4.222
 [node name="funny manager with anims2" parent="TheMenager" instance=ExtResource("12_s0aar")]
 
 [node name="Skeleton3D" parent="TheMenager/funny manager with anims2/Root" index="0"]
+bones/21/rotation = Quaternion(0.0118946, 1.00854e-08, 1.10452e-08, 0.999929)
+bones/22/rotation = Quaternion(0.0491658, 2.67474e-10, -6.23697e-11, 0.998791)
+bones/23/rotation = Quaternion(0.0765313, 0.0468313, -0.00359852, 0.99596)
 bones/26/position = Vector3(0.0882801, 0.281082, 0.0649611)
+bones/27/rotation = Quaternion(0.490134, 0.488577, 0.499359, 0.52125)
+bones/28/rotation = Quaternion(-0.17661, -0.142841, 0.113888, 0.967179)
+bones/29/rotation = Quaternion(0.18921, -0.134374, -0.0816149, 0.969269)
 bones/38/position = Vector3(7.53104e-09, 0.258802, 5.34269e-07)
+bones/38/rotation = Quaternion(-0.530776, 0.828648, -0.0691745, 0.163811)
 bones/39/position = Vector3(-6.32441e-08, 0.470775, -1.70782e-07)
+bones/39/rotation = Quaternion(-0.309024, -0.634286, 0.0159553, 0.708471)
 bones/39/scale = Vector3(1, 1, 1)
 
 [node name="AnimationPlayer" parent="TheMenager/funny manager with anims2" index="1"]
@@ -197,7 +205,6 @@ active = false
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5.86059, -0.147378, 1.92063)
 visible = false
 
-[connection signal="done_listening" from="Player" to="." method="_on_player_done_listening"]
 [connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
 
 [editable path="predmeti/Monitor"]

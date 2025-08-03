@@ -12,15 +12,13 @@ var talking = false
 func _ready() -> void:
 	#menadzer.set_deferred("visible",true)
 	animation.play("peek")
-	player.listen_to_this("Da li si uneo Bullfrog u Salaryju")
-	talking = true
-	audio.play()
-
-
-
-func _on_player_done_listening() -> void:
-	talking = false
+	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don't want economy reality desynchronizing. Don't let me catch you slacking again!")
+	await get_tree().create_timer(15.0).timeout
+	animation.play_backwards("peek")
+	await get_tree().create_timer(3.0).timeout
 	
+	
+	menadzer2.set_deferred("visible",false)
 
 
 func _on_dialogue_box_next_letter() -> void:
