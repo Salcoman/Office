@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=37 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -13,7 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://dnlom5lgc8wsi" path="res://Resources/Sprites/floor_tiles.png" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://caruk5nvfir0w" path="res://Models/tastatura.blend" id="10_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://dojdfc42oti4a" path="res://Models/menager_scene.tscn" id="12_knsl5"]
+[ext_resource type="PackedScene" uid="uid://umiqcsx4n0xe" path="res://Models/stolica_scena.tscn" id="12_m8tx5"]
 [ext_resource type="PackedScene" uid="uid://bnuc2i4wg3ghe" path="res://Models/funny_manager_with_anims_2.tscn" id="12_s0aar"]
+[ext_resource type="PackedScene" uid="uid://pxexlh7snqtq" path="res://Models/ram_za_sliku_riba.tscn" id="13_4hetp"]
 [ext_resource type="PackedScene" uid="uid://dkvocwmt5vsp7" path="res://Models/vrata.tscn" id="14_gxl1f"]
 [ext_resource type="PackedScene" uid="uid://ce0ab6asv2m18" path="res://Models/NEONKA_centrirana.tscn" id="16_m8tx5"]
 
@@ -260,6 +262,12 @@ transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908
 
 [node name="tastatura" parent="predmeti" instance=ExtResource("10_3xqf3")]
 transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804136, -0.262478, 3.72872, -2.47677)
+
+[node name="stolica" parent="predmeti" instance=ExtResource("12_m8tx5")]
+transform = Transform3D(1.06745, 0, 0, 0, 1.42784, 0, 0, 0, 1, 5.60154, 0, 0)
+
+[node name="ram za sliku2" parent="predmeti" instance=ExtResource("13_4hetp")]
+transform = Transform3D(0.0308256, 2.85274, -0.394139, 0.222433, -0.395343, -2.84405, -2.87123, 2.30019e-08, -0.224559, 1.37323, 6.97815, 9.52433)
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("4_43ocd")]
 
