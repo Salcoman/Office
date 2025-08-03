@@ -45,7 +45,7 @@ transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, -0.348, -1.289,
 mesh = SubResource("CapsuleMesh_ui7yi")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.08863, -0.531961)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.815429, -0.531961)
 
 [node name="DialogueBox" parent="." instance=ExtResource("2_5cgdt")]
 visible = false
