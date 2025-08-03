@@ -60,8 +60,10 @@ func _process(delta: float) -> void:
 			$ProgressBar.value = broj
 		else:
 			$ProgressBar.value = 100
-			has_work_failed = true
+			preostaloVreme = startTime
+			#has_work_failed = true
 			work_failed.emit()
+			
 		
 
 func _smanjiVreme(vredbnost: float) -> void:

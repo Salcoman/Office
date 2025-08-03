@@ -7,7 +7,8 @@ extends Node3D
 @onready var audio = $"TheMenager/funny manager with anims2/AudioStreamPlayer3D"
 @onready var player = $Player
 @onready var izlazPolje = $IzadjiNapolje
-
+@onready var VRATA = $VRATA
+@onready var vrataAnimacija = $VRATA/AnimationPlayer
 
 var talking = false
 var izlazStanje = false # provera za izlaz
@@ -52,5 +53,5 @@ func _on_izadji_napolje_body_exited(body: Node3D) -> void:
 	izlazStanje = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("otvori_vrata") and izlazStanje:
-		print("OTVORI MI SVOJA VRATA")
+	if event.is_action("otvori") and izlazStanje:
+		vrataAnimacija.play("otvori_se")

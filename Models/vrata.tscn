@@ -1,14 +1,81 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkvocwmt5vsp7"]
+[gd_scene load_steps=6 format=3 uid="uid://dkvocwmt5vsp7"]
 
 [ext_resource type="PackedScene" uid="uid://cwupm0nikm4a3" path="res://Models/VRATA.blend" id="1_h25b2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jp43a"]
 size = Vector3(2.00781, 1.97437, 2.23413)
 
+[sub_resource type="Animation" id="Animation_h25b2"]
+resource_name = "otvori_se"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0), Vector3(0, 1.5708, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.103471, 4.05366, 0.333834), Vector3(-1.81289, 4.05366, 1.82595)]
+}
+
+[sub_resource type="Animation" id="Animation_jp43a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.14159, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.103471, 4.05366, 0.333834)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pjs5x"]
+_data = {
+&"RESET": SubResource("Animation_jp43a"),
+&"otvori_se": SubResource("Animation_h25b2")
+}
+
 [node name="VRATA" instance=ExtResource("1_h25b2")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(2.02964, 0, -2.21843e-08, 0, -3.86161, 0, 1.77436e-07, 0, 0.253758, -0.103471, 4.05366, 0.333834)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_jp43a")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_pjs5x")
+}
