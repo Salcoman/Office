@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://tb0vv1e74hk6"]
 
-[ext_resource type="Script" uid="uid://b4xy5iyseolbw" path="res://circuit_track_interface.gd" id="1_lww7l"]
+[ext_resource type="Script" uid="uid://b4xy5iyseolbw" path="res://Controllers/Scripts/circuit_track_interface.gd" id="1_lww7l"]
 [ext_resource type="Texture2D" uid="uid://c172ja81jm4rd" path="res://Resources/SpriteSheets/spritesheet_tiles.png" id="1_qnq1p"]
 [ext_resource type="FontFile" uid="uid://bifcrntktb7rx" path="res://Resources/UI/Fonts/kenvector_future.ttf" id="2_1j2kh"]
 [ext_resource type="Texture2D" uid="uid://cqe0rxyeyl1cr" path="res://Resources/Sprites/road_dirt69.png" id="3_lww7l"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://uc3y07av2idp"
-path="res://.godot/imported/hill-9681095_640.jpg-fcc2333ff53a8138314706d2a8b2b3bb.ctex"
+path="res://.godot/imported/hill-9681095_640.jpg-1ae844920269c6940716ca9e0c3e017d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://hill-9681095_640.jpg"
-dest_files=["res://.godot/imported/hill-9681095_640.jpg-fcc2333ff53a8138314706d2a8b2b3bb.ctex"]
+source_file="res://Resources/wallpaper/hill-9681095_640.jpg"
+dest_files=["res://.godot/imported/hill-9681095_640.jpg-1ae844920269c6940716ca9e0c3e017d.ctex"]
 
 [params]
 

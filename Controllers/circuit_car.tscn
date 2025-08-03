@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bt3b46l5fcr1l"]
 
-[ext_resource type="Texture2D" uid="uid://r4q67bqkj6ac" path="res://Resources/car_black_1.png" id="1_cxbed"]
+[ext_resource type="Texture2D" uid="uid://r4q67bqkj6ac" path="res://Resources/Sprites/car_black_1.png" id="1_cxbed"]
 [ext_resource type="Script" uid="uid://cypxpudwp2uus" path="res://Controllers/Scripts/circuit_car.gd" id="2_asab2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_asab2"]

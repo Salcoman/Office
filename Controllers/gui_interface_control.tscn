@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://d1oe38id0vei8"]
 
-[ext_resource type="Texture2D" uid="uid://uc3y07av2idp" path="res://hill-9681095_640.jpg" id="1_6arph"]
+[ext_resource type="Texture2D" uid="uid://uc3y07av2idp" path="res://Resources/wallpaper/hill-9681095_640.jpg" id="1_6arph"]
 [ext_resource type="FontFile" uid="uid://bifcrntktb7rx" path="res://Resources/UI/Fonts/kenvector_future.ttf" id="2_ojakh"]
 [ext_resource type="Texture2D" uid="uid://bjectegfjrf1o" path="res://Resources/UI/Icons/metalPanel_blue.png" id="3_fvjx8"]
 [ext_resource type="Texture2D" uid="uid://dh8a4b7gg2u48" path="res://Resources/UI/Icons/metalPanel_green.png" id="4_7ptim"]

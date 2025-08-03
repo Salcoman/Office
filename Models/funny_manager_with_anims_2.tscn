@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://bnuc2i4wg3ghe"]
 
-[ext_resource type="PackedScene" uid="uid://b06u4x4sng54m" path="res://funny manager with anims2.glb" id="1_thfi8"]
+[ext_resource type="PackedScene" uid="uid://b06u4x4sng54m" path="res://Models/funny manager with anims2.glb" id="1_thfi8"]
 [ext_resource type="AudioStream" uid="uid://crl88f3xg0mld" path="res://Resources/audio/creature1.ogg" id="2_f6aqf"]
 [ext_resource type="AudioStream" uid="uid://b68kjqg4v0fuv" path="res://Resources/audio/creature2.ogg" id="3_fxi10"]
 [ext_resource type="AudioStream" uid="uid://dyhd7252bq587" path="res://Resources/audio/creature3.ogg" id="4_ct47t"]

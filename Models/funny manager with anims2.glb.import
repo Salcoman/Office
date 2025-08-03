@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bnbeimcd7rpko"
-path="res://.godot/imported/monitor 3.glb-d80761fcec2e6bef302f46be991839f7.scn"
+uid="uid://b06u4x4sng54m"
+path="res://.godot/imported/funny manager with anims2.glb-210c78adc03338f265afc11b195acf6b.scn"
 
 [deps]
 
-source_file="res://monitor 3.glb"
-dest_files=["res://.godot/imported/monitor 3.glb-d80761fcec2e6bef302f46be991839f7.scn"]
+source_file="res://Models/funny manager with anims2.glb"
+dest_files=["res://.godot/imported/funny manager with anims2.glb-210c78adc03338f265afc11b195acf6b.scn"]
 
 [params]
 
