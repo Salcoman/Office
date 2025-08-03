@@ -1,6 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnuc2i4wg3ghe"]
+[gd_scene load_steps=11 format=3 uid="uid://bnuc2i4wg3ghe"]
 
 [ext_resource type="PackedScene" uid="uid://b06u4x4sng54m" path="res://funny manager with anims2.glb" id="1_thfi8"]
+[ext_resource type="AudioStream" uid="uid://crl88f3xg0mld" path="res://Resources/audio/creature1.ogg" id="2_f6aqf"]
+[ext_resource type="AudioStream" uid="uid://b68kjqg4v0fuv" path="res://Resources/audio/creature2.ogg" id="3_fxi10"]
+[ext_resource type="AudioStream" uid="uid://dyhd7252bq587" path="res://Resources/audio/creature3.ogg" id="4_ct47t"]
+[ext_resource type="AudioStream" uid="uid://dqnyfn61sg16k" path="res://Resources/audio/creature4.ogg" id="5_iqu77"]
+[ext_resource type="AudioStream" uid="uid://xg3vlm5tdfx7" path="res://Resources/audio/creature5.ogg" id="6_1jib2"]
 
 [sub_resource type="Animation" id="Animation_pwodx"]
 length = 0.001
@@ -112,6 +117,15 @@ _data = {
 &"peek": SubResource("Animation_thfi8")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6ups8"]
+playback_mode = 1
+streams_count = 5
+stream_0/stream = ExtResource("2_f6aqf")
+stream_1/stream = ExtResource("3_fxi10")
+stream_2/stream = ExtResource("4_ct47t")
+stream_3/stream = ExtResource("5_iqu77")
+stream_4/stream = ExtResource("6_1jib2")
+
 [node name="funny manager with anims2" instance=ExtResource("1_thfi8")]
 
 [node name="Skeleton3D" parent="Root" index="0"]
@@ -168,3 +182,6 @@ bones/56/rotation = Quaternion(0.0282605, 0.953941, -0.297574, -0.0254451)
 libraries = {
 &"": SubResource("AnimationLibrary_hsutm")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="3"]
+stream = SubResource("AudioStreamRandomizer_6ups8")

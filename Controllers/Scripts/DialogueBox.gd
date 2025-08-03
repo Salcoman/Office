@@ -7,6 +7,7 @@ var scroll_speed = 0.1 # Seconds per character
 @onready var full_text = label.text
 
 signal done_reading
+signal next_letter
 
 func _ready():
 	set_process(true)
@@ -17,6 +18,7 @@ func scroll_text():
 		char_index += 1
 		label.visible_characters += 1
 		await get_tree().create_timer(scroll_speed).timeout
+		next_letter.emit()
 	done_reading.emit()
 
 func read_to_player(text:String):

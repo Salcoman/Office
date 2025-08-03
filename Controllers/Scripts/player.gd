@@ -21,6 +21,8 @@ var LOW_MOUSE_SPEED = 2
 var current_mouse_speed = HIGH_MOUSE_SPEED
 var player_is_listening = false
 
+signal done_listening
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
 		get_tree().quit()
@@ -100,5 +102,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_dialogue_box_done_reading() -> void:
 	player_is_listening = false
+	done_listening.emit()
 	await get_tree().create_timer(5).timeout
 	dialogue.set_deferred("visible", false)
