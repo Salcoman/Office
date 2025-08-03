@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=41 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bnuc2i4wg3ghe" path="res://Models/funny_manager_with_anims_2.tscn" id="12_s0aar"]
 [ext_resource type="PackedScene" uid="uid://pxexlh7snqtq" path="res://Models/ram_za_sliku_riba.tscn" id="13_4hetp"]
 [ext_resource type="PackedScene" uid="uid://dkvocwmt5vsp7" path="res://Models/vrata.tscn" id="14_gxl1f"]
+[ext_resource type="Texture2D" uid="uid://bf108ypte6ail" path="res://Resources/Sprites/exit.png" id="14_o3cd7"]
 [ext_resource type="PackedScene" uid="uid://ce0ab6asv2m18" path="res://Models/NEONKA_centrirana.tscn" id="16_m8tx5"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
@@ -66,6 +67,12 @@ size = Vector3(3.919, 2.784, 7.905)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4hetp"]
 size = Vector3(1.79199, 1.75073, 2.15582)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qan1"]
+albedo_texture = ExtResource("14_o3cd7")
+uv1_scale = Vector3(3.01, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jktts"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uxut"]
 size = Vector3(1, 1.99121, 1.32178)
@@ -169,6 +176,17 @@ skeleton = NodePath("../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="teren/zid9"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid9/StaticBody3D"]
+shape = SubResource("BoxShape3D_70x1r")
+
+[node name="zid12" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-2.18557e-08, 0, 17, 0, 11.3622, 0, -0.5, 0, -7.43094e-07, 14.9797, 4.593, -28.5329)
+material_override = SubResource("StandardMaterial3D_s0aar")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid12"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid12/StaticBody3D"]
 shape = SubResource("BoxShape3D_70x1r")
 
 [node name="zid7" type="MeshInstance3D" parent="teren"]
@@ -278,6 +296,11 @@ shape = SubResource("BoxShape3D_4hetp")
 [node name="ram za sliku2" parent="predmeti" instance=ExtResource("13_4hetp")]
 transform = Transform3D(0.0308256, 2.85274, -0.394139, 0.222433, -0.395343, -2.84405, -2.87123, 2.30019e-08, -0.224559, 1.37323, 6.97815, 9.52433)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="predmeti"]
+transform = Transform3D(0.212206, 0, 0, 0, 1.09618, 0, 0, 0, 3.07997, 18.7264, 7.80972, -7.38603)
+material_override = SubResource("StandardMaterial3D_8qan1")
+mesh = SubResource("BoxMesh_jktts")
+
 [node name="WorldEnvironment" parent="." instance=ExtResource("4_43ocd")]
 
 [node name="Player" parent="." instance=ExtResource("3_u8nhc")]
@@ -381,7 +404,7 @@ omni_range = 10.69
 omni_attenuation = 0.191
 
 [node name="ExitGame" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5434, 2.62571, -8.18678)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3382, 2.52539, 4.62313)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExitGame"]
 transform = Transform3D(9.8, 0, 0, 0, 7, 0, 0, 0, 14, 0.667114, 0, 0.340957)
