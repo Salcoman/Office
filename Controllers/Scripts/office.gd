@@ -15,10 +15,7 @@ func _ready() -> void:
 	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don't want economy reality desynchronizing. Don't let me catch you slacking again!")
 	await get_tree().create_timer(15.0).timeout
 	animation.play_backwards("peek")
-	await get_tree().create_timer(3.0).timeout
 	
-	
-	menadzer2.set_deferred("visible",false)
 
 
 func _on_dialogue_box_next_letter() -> void:
@@ -26,4 +23,9 @@ func _on_dialogue_box_next_letter() -> void:
 
 
 func _on_work_failed() -> void:
+	menadzer2.set_deferred("visible",true)
 	player.listen_to_this("Add failed scenario")
+
+
+func _on_player_done_listening() -> void:
+	menadzer2.set_deferred("visible",false)
