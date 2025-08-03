@@ -20,6 +20,7 @@ var HIGH_MOUSE_SPEED = 10
 var LOW_MOUSE_SPEED = 2
 var current_mouse_speed = HIGH_MOUSE_SPEED
 var player_is_listening = false
+var is_walking = false
 
 signal done_listening
 
@@ -35,7 +36,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		_tilt_input = -event.relative.y * MOUSE_SENSITIVITY
 	
-	if event is InputEventKey:
+	if event is InputEventKey and !is_walking:
 		$AudioStreamPlayer3D.play()
 		
 const SPEED = 5.0
@@ -72,13 +73,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("switch_mouse"):
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			is_walking = false
 			current_mouse_speed = LOW_MOUSE_SPEED
 		else:
 			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+			is_walking = true
 			current_mouse_speed = HIGH_MOUSE_SPEED
 			
 	#If mouse visible return(prevent movement)
-	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE or player_is_listening:
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE or player_is_listening or !is_walking:
 		return
 	
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
