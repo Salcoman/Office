@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=38 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -63,6 +63,9 @@ uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gxl1f"]
 size = Vector3(3.919, 2.784, 7.905)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4hetp"]
+size = Vector3(1.79199, 1.75073, 2.15582)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uxut"]
 size = Vector3(1, 1.99121, 1.32178)
@@ -265,6 +268,12 @@ transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804
 
 [node name="stolica" parent="predmeti" instance=ExtResource("12_m8tx5")]
 transform = Transform3D(1.06745, 0, 0, 0, 1.42784, 0, 0, 0, 1, 5.60154, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="predmeti/stolica"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="predmeti/stolica/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11377, 0.375366, 0.0403748)
+shape = SubResource("BoxShape3D_4hetp")
 
 [node name="ram za sliku2" parent="predmeti" instance=ExtResource("13_4hetp")]
 transform = Transform3D(0.0308256, 2.85274, -0.394139, 0.222433, -0.395343, -2.84405, -2.87123, 2.30019e-08, -0.224559, 1.37323, 6.97815, 9.52433)
