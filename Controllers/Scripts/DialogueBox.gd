@@ -22,6 +22,8 @@ func scroll_text():
 	done_reading.emit()
 
 func read_to_player(text:String):
+	char_index = 0
+	label.visible_characters = 0
 	label.text = text
 	full_text = label.text
 	scroll_text()

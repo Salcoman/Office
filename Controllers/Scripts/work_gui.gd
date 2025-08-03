@@ -6,6 +6,8 @@ var ugly_label_settings_bad : LabelSettings = preload("res://Resources/ugly_labe
 var startTime : int = 0
 var broj : float = 0
 var preostaloVreme : float = 0
+var has_work_failed : bool = false
+
 signal work_failed
 
 signal minimize_me
@@ -50,14 +52,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	# MRTVO RACUNANJE VREMENA
-	
-	if preostaloVreme>0:
-		preostaloVreme-=delta
-		broj = (1 - preostaloVreme / startTime)*100
-		$ProgressBar.value = broj
-	else:
-		$ProgressBar.value = 100
-		work_failed.emit()
+	if has_work_failed == false:
+		if preostaloVreme>0:
+			preostaloVreme-=delta
+			broj = (1 - preostaloVreme / startTime)*100
+			$ProgressBar.value = broj
+		else:
+			$ProgressBar.value = 100
+			has_work_failed = true
+			work_failed.emit()
 		
 
 func _smanjiVreme(vredbnost: float) -> void:
