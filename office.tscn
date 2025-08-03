@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=30 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -51,6 +51,14 @@ size = Vector3(2, 2, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_knsl5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s0aar"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_s0aar"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxl1f"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_s0aar")
 
 [node name="Office" type="Node3D"]
 script = ExtResource("1_70x1r")
@@ -161,6 +169,9 @@ transform = Transform3D(0.955195, 0, 0, 0, 1.74131, 0, 0, 0, 1.74131, -0.136421,
 [node name="GUI" parent="predmeti/monitor 3" instance=ExtResource("3_hsito")]
 transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908e-09, 0.444051, -0.0889304, -0.0162989)
 
+[node name="MeshInstance3D" parent="predmeti/monitor 3/GUI" index="0"]
+material_override = SubResource("StandardMaterial3D_gxl1f")
+
 [node name="tastatura" parent="predmeti" instance=ExtResource("10_3xqf3")]
 transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804136, -0.262478, 3.72872, -2.47677)
 
@@ -205,9 +216,12 @@ active = false
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5.86059, -0.147378, 1.92063)
 visible = false
 
+[connection signal="work_failed" from="predmeti/monitor 3/GUI/SubViewport/Work" to="." method="_on_work_work_failed"]
 [connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
 
 [editable path="predmeti/Monitor"]
+[editable path="predmeti/monitor 3/GUI"]
+[editable path="predmeti/monitor 3/GUI/SubViewport/Desktop"]
 [editable path="Player"]
 [editable path="TheMenager/funny manager with anims2"]
 [editable path="menadzer"]

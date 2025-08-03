@@ -6,6 +6,7 @@ var ugly_label_settings_bad : LabelSettings = preload("res://Resources/ugly_labe
 var startTime : int = 0
 var broj : float = 0
 var preostaloVreme : float = 0
+signal work_failed
 
 signal minimize_me
 
@@ -56,6 +57,8 @@ func _process(delta: float) -> void:
 		$ProgressBar.value = broj
 	else:
 		$ProgressBar.value = 100
+		work_failed.emit()
+		
 
 func _smanjiVreme(vredbnost: float) -> void:
 	preostaloVreme-=vredbnost
@@ -77,6 +80,7 @@ func _on_button_pressed() -> void:
 		confirmation_box2.set_deferred("label_settings",ugly_label_settings)
 		counter += 1
 		generated_number2.set_deferred("text", randi_range(100000000,999999999))
+		_smanjiVreme(-5.0)
 	else:
 		confirmation_box2.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
@@ -87,6 +91,7 @@ func _on_button_pressed() -> void:
 		confirmation_box3.set_deferred("label_settings",ugly_label_settings)
 		counter += 1
 		generated_number3.set_deferred("text", randi_range(100000000,999999999))
+		_smanjiVreme(-5.0)
 	else:
 		confirmation_box3.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
@@ -97,6 +102,7 @@ func _on_button_pressed() -> void:
 		confirmation_box4.set_deferred("label_settings",ugly_label_settings)
 		counter += 1
 		generated_number4.set_deferred("text", randi_range(100000000,999999999))
+		_smanjiVreme(-5.0)
 	else:
 		confirmation_box4.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
@@ -107,6 +113,7 @@ func _on_button_pressed() -> void:
 		confirmation_box5.set_deferred("label_settings",ugly_label_settings)
 		counter += 1
 		generated_number5.set_deferred("text", randi_range(100000000,999999999))
+		_smanjiVreme(-5.0)
 	else:
 		confirmation_box5.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
@@ -117,6 +124,7 @@ func _on_button_pressed() -> void:
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings)
 		counter += 1
 		generated_number6.set_deferred("text", randi_range(100000000,999999999))
+		_smanjiVreme(-5.0)
 	else:
 		confirmation_box6.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)

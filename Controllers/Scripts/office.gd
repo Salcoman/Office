@@ -23,3 +23,7 @@ func _ready() -> void:
 
 func _on_dialogue_box_next_letter() -> void:
 	audio.play()
+
+
+func _on_work_work_failed() -> void:
+	player.listen_to_this("Add failed scenario")
