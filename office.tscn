@@ -53,7 +53,7 @@ size = Vector3(2, 2, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_s0aar"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gxl1f"]
-size = Vector3(3.91943, 6.24915, 7.90489)
+size = Vector3(3.919, 2.784, 7.905)
 
 [node name="Office" type="Node3D"]
 script = ExtResource("1_70x1r")
@@ -157,7 +157,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.443251, -0.334845, 0)
 [node name="StaticBody3D" type="StaticBody3D" parent="predmeti/Desk"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="predmeti/Desk/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0968547, 2.38179, 0.00815582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0968547, 1.88446, 0.00815582)
 shape = SubResource("BoxShape3D_gxl1f")
 
 [node name="Monitor" parent="predmeti" instance=ExtResource("2_u8nhc")]
