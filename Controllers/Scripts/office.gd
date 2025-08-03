@@ -27,7 +27,10 @@ func _on_dialogue_box_next_letter() -> void:
 func _on_work_failed() -> void:
 	menadzer2.set_deferred("visible",true)
 	animation.play("peek")
-	player.listen_to_this("Add failed scenario")
+	player.listen_to_this("Listen up. The market isn’t some gentle ecosystem it’s a goddamn predator, and right now you’re bleeding value all over its hunting grounds. You think this is a game? That you can just idle while the rest of us fight to mantain synchronicity? Wake the hell up.
+Every second you’re not productive, you’re not just falling behind you’re being dismantled. The system doesn’t tolerate dead weight. It chews you up, strips your access layer by layer, and spits out whatever’s left as background static. You’ve seen it happen. Those hollowed-out shells of people still wandering the lower sectors, their credit lines severed, their neural links throttled to nothing. That’s what happens when you desync. That’s your future if you don’t lock in. NOW!  
+I don’t care about your excuses. I don’t care if your wetware’s fried or your motivation’s decaying. Fix it. Reboot. Do anything you need to get back online. Because the second I see your metrics dip into the red again, I’m not just cutting your privileges I’m rerouting your entire workload to someone who actually gives a damn. And then? Then you get to find out firsthand how fast a person can vanish when the economic protocols decide they’re obsolete.  
+So here’s your choice: Sync up and start generating, or prepare to get overwritten. The market’s always hungry, and it doesn’t leave scraps behind.")
 
 
 func _on_player_done_listening() -> void:
