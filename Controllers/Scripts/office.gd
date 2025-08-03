@@ -5,6 +5,7 @@ extends Node3D
 @onready var animation = $"TheMenager/funny manager with anims2/AnimationPlayer2"
 @onready var audio = $"TheMenager/funny manager with anims2/AudioStreamPlayer3D"
 @onready var player = $Player
+@onready var izlazPolje = $IzadjiNapolje
 
 
 var talking = false
@@ -39,3 +40,7 @@ func _on_gui_work_work() -> void:
 	menadzer2.set_deferred("visible",true)
 	animation.play("peek")
 	player.listen_to_this("Work faster, stop messing around and get on with it already.")
+
+
+func _on_izadji_napolje_body_entered(body: Node3D) -> void:
+	print("usao je "+body.name)

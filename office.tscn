@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=33 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
@@ -60,6 +60,9 @@ uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gxl1f"]
 size = Vector3(3.919, 2.784, 7.905)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2uxut"]
+size = Vector3(1, 1.99121, 1.32178)
 
 [node name="Office" type="Node3D"]
 script = ExtResource("1_70x1r")
@@ -315,11 +318,19 @@ bones/39/rotation = Quaternion(0.00073378, -0.00476747, 0.0470719, 0.99888)
 [node name="VRATA" parent="." instance=ExtResource("14_gxl1f")]
 transform = Transform3D(-5.27031e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 6.73222, -0.474763, -9.49022)
 
+[node name="IzadjiNapolje" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66165, 0, -9.7457)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="IzadjiNapolje"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 4.66157, 0.482666)
+shape = SubResource("BoxShape3D_2uxut")
+
 [connection signal="work_failed" from="predmeti/monitor 3/GUI" to="." method="_on_work_failed"]
 [connection signal="work_work" from="predmeti/monitor 3/GUI" to="." method="_on_gui_work_work"]
 [connection signal="done_listening" from="Player" to="." method="_on_player_done_listening"]
 [connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
 [connection signal="animation_finished" from="TheMenager/funny manager with anims2/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
+[connection signal="body_entered" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_entered"]
 
 [editable path="predmeti/Desk"]
 [editable path="predmeti/Monitor"]
