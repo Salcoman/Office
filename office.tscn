@@ -1,11 +1,10 @@
-[gd_scene load_steps=33 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=32 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
 [ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://bcdcwrjyw0w8e" path="res://Controllers/gui.tscn" id="3_hsito"]
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
-[ext_resource type="Texture2D" uid="uid://6frpehht0oc2" path="res://Resources/Sprites/upisanplafon_128px.png" id="4_2uxut"]
 [ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
 [ext_resource type="PackedScene" uid="uid://b24h56sfwxg00" path="res://Models/ram_za_sliku.tscn" id="4_knsl5"]
 [ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://Models/monitor 3.glb" id="5_lcnwv"]
@@ -51,7 +50,6 @@ uv1_scale = Vector3(10, 10, 1)
 size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1y4y"]
-albedo_texture = ExtResource("4_2uxut")
 uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_knsl5"]
