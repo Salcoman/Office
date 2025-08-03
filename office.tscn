@@ -1,0 +1,244 @@
+[gd_scene load_steps=29 format=3 uid="uid://dds5gpo2llq1c"]
+
+[ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
+[ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
+[ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
+[ext_resource type="PackedScene" uid="uid://bcdcwrjyw0w8e" path="res://Controllers/gui.tscn" id="3_hsito"]
+[ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
+[ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
+[ext_resource type="PackedScene" uid="uid://b24h56sfwxg00" path="res://Models/ram_za_sliku.tscn" id="4_knsl5"]
+[ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://Models/monitor 3.glb" id="5_lcnwv"]
+[ext_resource type="Texture2D" uid="uid://ru1os3bv1dqr" path="res://Resources/Sprites/walltexture.png" id="7_wruqr"]
+[ext_resource type="Texture2D" uid="uid://dnlom5lgc8wsi" path="res://Resources/Sprites/floor_tiles.png" id="8_wruqr"]
+[ext_resource type="PackedScene" uid="uid://caruk5nvfir0w" path="res://Models/tastatura.blend" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://dojdfc42oti4a" path="res://Models/menager_scene.tscn" id="12_knsl5"]
+[ext_resource type="PackedScene" uid="uid://bnuc2i4wg3ghe" path="res://Models/funny_manager_with_anims_2.tscn" id="12_s0aar"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcwox"]
+albedo_texture = ExtResource("7_wruqr")
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lcnwv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wruqr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xqf3"]
+albedo_texture = ExtResource("7_wruqr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lcwox"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70x1r"]
+albedo_texture = ExtResource("7_wruqr")
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3xqf3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0aar"]
+albedo_texture = ExtResource("7_wruqr")
+uv1_scale = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_70x1r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knsl5"]
+albedo_texture = ExtResource("8_wruqr")
+uv1_scale = Vector3(10, 10, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s0aar"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_knsl5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s0aar"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gxl1f"]
+size = Vector3(3.91943, 6.24915, 7.90489)
+
+[node name="Office" type="Node3D"]
+script = ExtResource("1_70x1r")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_43ocd")
+
+[node name="teren" type="Node" parent="."]
+
+[node name="zid" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-0.5, 0, -9.61651e-07, 0, 10, 0, 4.37114e-08, 0, -11, -2.97361, 4.59336, -0.929929)
+material_override = SubResource("StandardMaterial3D_lcwox")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid/StaticBody3D"]
+shape = SubResource("BoxShape3D_wruqr")
+
+[node name="zid2" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-2.18557e-08, 0, 11, 0, 10, 0, -0.5, 0, -4.80825e-07, 2.26821, 4.59336, -6.66826)
+material_override = SubResource("StandardMaterial3D_3xqf3")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid2/StaticBody3D"]
+shape = SubResource("BoxShape3D_lcwox")
+
+[node name="zid4" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-2.18557e-08, 0, -18.8333, 0, 10, 0, 0.5, 0, -8.2323e-07, -0.380272, 4.59336, 9.90604)
+material_override = SubResource("StandardMaterial3D_70x1r")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid4/StaticBody3D"]
+shape = SubResource("BoxShape3D_3xqf3")
+
+[node name="zid3" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 7.49845, 4.59336, 1.6751)
+material_override = SubResource("StandardMaterial3D_s0aar")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid3/StaticBody3D"]
+shape = SubResource("BoxShape3D_70x1r")
+
+[node name="Pod" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, -0.417213, 0)
+material_override = SubResource("StandardMaterial3D_knsl5")
+lod_bias = 0.001
+mesh = SubResource("BoxMesh_s0aar")
+skeleton = NodePath("../..")
+
+[node name="Plafon" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 9.74778, 0)
+visible = false
+material_override = SubResource("StandardMaterial3D_knsl5")
+lod_bias = 0.001
+mesh = SubResource("BoxMesh_s0aar")
+skeleton = NodePath("../..")
+
+[node name="zid5" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-0.5, 0, -1.92671e-06, 0, 10, 0, 4.37114e-08, 0, -22.039, -9.84776, 4.59336, -0.935254)
+material_override = SubResource("StandardMaterial3D_lcwox")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid5/StaticBody3D"]
+shape = SubResource("BoxShape3D_knsl5")
+
+[node name="zid6" type="MeshInstance3D" parent="teren"]
+transform = Transform3D(-2.18557e-08, 0, -17.1162, 0, 10, 0, 0.5, 0, -7.48174e-07, -1.12323, 4.59336, -12.0327)
+material_override = SubResource("StandardMaterial3D_70x1r")
+mesh = SubResource("BoxMesh_lcnwv")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid6/StaticBody3D"]
+shape = SubResource("BoxShape3D_s0aar")
+
+[node name="predmeti" type="Node" parent="."]
+
+[node name="ram za sliku" parent="predmeti" instance=ExtResource("4_knsl5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69449, 6.40373, 1.99389)
+
+[node name="Desk" parent="predmeti" instance=ExtResource("1_ei2s5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.443251, -0.334845, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="predmeti/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="predmeti/Desk/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0968547, 2.38179, 0.00815582)
+shape = SubResource("BoxShape3D_gxl1f")
+
+[node name="Monitor" parent="predmeti" instance=ExtResource("2_u8nhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0391032, 4.49528, 0.274906)
+visible = false
+
+[node name="monitor 3" parent="predmeti" instance=ExtResource("5_lcnwv")]
+transform = Transform3D(0.955195, 0, 0, 0, 1.74131, 0, 0, 0, 1.74131, -0.136421, 4.31529, 0.303288)
+
+[node name="GUI" parent="predmeti/monitor 3" instance=ExtResource("3_hsito")]
+transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908e-09, 0.444051, -0.0889304, -0.0162989)
+
+[node name="tastatura" parent="predmeti" instance=ExtResource("10_3xqf3")]
+transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804136, -0.262478, 3.72872, -2.47677)
+
+[node name="WorldEnvironment" parent="." instance=ExtResource("4_43ocd")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75744, 9.49331, 1.46023)
+light_energy = 0.418
+shadow_enabled = true
+omni_range = 10.69
+omni_attenuation = -0.11
+
+[node name="Player" parent="." instance=ExtResource("3_u8nhc")]
+transform = Transform3D(2.62268e-07, 0, 2, 0, 2, 0, -2, 0, 2.62268e-07, 4.01722, 3.13815, 0)
+
+[node name="MenagerSpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7195, 2.98945, 0)
+
+[node name="TheMenager" type="Node3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -4.22286, -0.147378, 4.01163)
+
+[node name="funny manager with anims2" parent="TheMenager" instance=ExtResource("12_s0aar")]
+
+[node name="Skeleton3D" parent="TheMenager/funny manager with anims2/Root" index="0"]
+bones/3/rotation = Quaternion(0.946129, -0.0218709, 0.0755026, -0.314104)
+bones/18/rotation = Quaternion(9.30153e-05, -6.394e-09, 0.999999, -0.00144307)
+bones/21/rotation = Quaternion(0.0118946, 1.00854e-08, 1.10452e-08, 0.999929)
+bones/22/rotation = Quaternion(0.0491658, 2.67474e-10, -6.23697e-11, 0.998791)
+bones/23/rotation = Quaternion(0.0765313, 0.0468313, -0.00359852, 0.99596)
+bones/26/position = Vector3(0.0882801, 0.281082, 0.0649611)
+bones/26/rotation = Quaternion(0.586882, 0.410653, 0.548295, -0.431632)
+bones/27/rotation = Quaternion(0.490134, 0.488577, 0.499359, 0.52125)
+bones/28/rotation = Quaternion(-0.17661, -0.142841, 0.113888, 0.967179)
+bones/29/rotation = Quaternion(0.18921, -0.134374, -0.0816149, 0.969269)
+bones/29/scale = Vector3(1, 1, 1)
+bones/37/rotation = Quaternion(0.658379, -0.507611, 0.459994, 0.311887)
+bones/38/position = Vector3(1.14553e-07, 0.258802, 5.33648e-07)
+bones/38/rotation = Quaternion(-0.530776, 0.828648, -0.0691745, 0.163811)
+bones/38/scale = Vector3(1, 1, 1)
+bones/39/position = Vector3(-6.14673e-08, 0.470775, -4.88624e-07)
+bones/39/rotation = Quaternion(-0.309024, -0.634286, 0.0159553, 0.708471)
+bones/39/scale = Vector3(1, 1, 1)
+bones/40/rotation = Quaternion(0.00820636, 0.000330768, -0.0330372, 0.99942)
+
+[node name="AnimationPlayer" parent="TheMenager/funny manager with anims2" index="1"]
+active = false
+
+[node name="menadzer" parent="." instance=ExtResource("12_knsl5")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -5.86059, -0.147378, 1.92063)
+visible = false
+
+[node name="Skeleton3D" parent="menadzer/funny manager with anims/Root" index="0"]
+bones/3/rotation = Quaternion(0.946129, -0.0218709, 0.0755026, -0.314104)
+bones/18/rotation = Quaternion(9.30153e-05, -6.394e-09, 0.999999, -0.00144307)
+bones/23/rotation = Quaternion(0.0766158, 5.10965e-10, 5.33664e-11, 0.997061)
+bones/38/position = Vector3(1.14553e-07, 0.258802, 5.33648e-07)
+bones/38/rotation = Quaternion(-0.000935268, 0.964877, -0.103902, -0.241281)
+bones/39/position = Vector3(-6.14673e-08, 0.470775, -4.88624e-07)
+bones/39/rotation = Quaternion(0.00073378, -0.00476747, 0.0470719, 0.99888)
+
+[connection signal="work_failed" from="predmeti/monitor 3/GUI" to="." method="_on_work_failed"]
+[connection signal="work_work" from="predmeti/monitor 3/GUI" to="." method="_on_gui_work_work"]
+[connection signal="done_listening" from="Player" to="." method="_on_player_done_listening"]
+[connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
+[connection signal="animation_finished" from="TheMenager/funny manager with anims2/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
+
+[editable path="predmeti/Desk"]
+[editable path="predmeti/Monitor"]
+[editable path="Player"]
+[editable path="TheMenager/funny manager with anims2"]
+[editable path="menadzer"]
+[editable path="menadzer/funny manager with anims"]
