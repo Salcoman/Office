@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkvocwmt5vsp7"]
+
+[ext_resource type="PackedScene" uid="uid://cwupm0nikm4a3" path="res://Models/VRATA.blend" id="1_h25b2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jp43a"]
+size = Vector3(2.00781, 1.97437, 2.23413)
+
+[node name="VRATA" instance=ExtResource("1_h25b2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_jp43a")
