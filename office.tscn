@@ -329,6 +329,7 @@ shape = SubResource("BoxShape3D_2uxut")
 [connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
 [connection signal="animation_finished" from="TheMenager/funny manager with anims2/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
 [connection signal="body_entered" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_entered"]
+[connection signal="body_exited" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_exited"]
 
 [editable path="predmeti/Desk"]
 [editable path="predmeti/Monitor"]

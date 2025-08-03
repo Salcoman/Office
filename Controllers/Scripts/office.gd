@@ -1,5 +1,6 @@
 extends Node3D
 
+
 @onready var menadzer = $menadzer
 @onready var menadzer2 = $TheMenager
 @onready var animation = $"TheMenager/funny manager with anims2/AnimationPlayer2"
@@ -9,6 +10,7 @@ extends Node3D
 
 
 var talking = false
+var izlazStanje = false # provera za izlaz
 
 func _ready() -> void:
 	#menadzer.set_deferred("visible",true)
@@ -43,4 +45,12 @@ func _on_gui_work_work() -> void:
 
 
 func _on_izadji_napolje_body_entered(body: Node3D) -> void:
-	print("usao je "+body.name)
+	izlazStanje = true
+
+
+func _on_izadji_napolje_body_exited(body: Node3D) -> void:
+	izlazStanje = false
+
+func _input(event: InputEvent) -> void:
+	if event.is_action("otvori_vrata") and izlazStanje:
+		print("OTVORI MI SVOJA VRATA")
