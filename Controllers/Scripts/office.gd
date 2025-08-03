@@ -11,6 +11,7 @@ var talking = false
 
 func _ready() -> void:
 	#menadzer.set_deferred("visible",true)
+	$teren/Plafon.set_deferred("visible", true)
 	animation.play("peek")
 	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don't want economy reality desynchronizing. Don't let me catch you slacking again!")
 	#await get_tree().create_timer(15.0).timeout

@@ -34,7 +34,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if _mouse_input:
 		_rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		_tilt_input = -event.relative.y * MOUSE_SENSITIVITY
-		
+	
+	if event is InputEventKey:
+		$AudioStreamPlayer3D.play()
 		
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5

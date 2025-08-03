@@ -1,13 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6qmfeoihrnpk"]
+[gd_scene load_steps=11 format=3 uid="uid://b6qmfeoihrnpk"]
 
 [ext_resource type="Script" uid="uid://bcf7yepuifll" path="res://Controllers/Scripts/player.gd" id="1_ui7yi"]
 [ext_resource type="PackedScene" uid="uid://b686ecor8bc87" path="res://Controllers/scrolling_dialogue_box.tscn" id="2_5cgdt"]
+[ext_resource type="AudioStream" uid="uid://2k5jmr7dbd6y" path="res://Resources/audio/click1.ogg" id="3_cc4ci"]
+[ext_resource type="AudioStream" uid="uid://dnh7odpra2qph" path="res://Resources/audio/click2.ogg" id="4_vgqsu"]
+[ext_resource type="AudioStream" uid="uid://djy8t413gqrfl" path="res://Resources/audio/click3.ogg" id="5_7w48v"]
+[ext_resource type="AudioStream" uid="uid://cl3ovv6qg228m" path="res://Resources/audio/click4.ogg" id="6_33e1e"]
+[ext_resource type="AudioStream" uid="uid://dxuonptdwo41k" path="res://Resources/audio/click5.ogg" id="7_iw1xq"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_e7ebd"]
 margin = 0.0
 height = 4.39851
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ui7yi"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2j1jm"]
+playback_mode = 1
+streams_count = 5
+stream_0/stream = ExtResource("3_cc4ci")
+stream_1/stream = ExtResource("4_vgqsu")
+stream_2/stream = ExtResource("5_7w48v")
+stream_3/stream = ExtResource("6_33e1e")
+stream_4/stream = ExtResource("7_iw1xq")
 
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -35,5 +49,8 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.08863, -0.531961)
 
 [node name="DialogueBox" parent="." instance=ExtResource("2_5cgdt")]
 visible = false
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_2j1jm")
 
 [connection signal="done_reading" from="DialogueBox" to="." method="_on_dialogue_box_done_reading"]
