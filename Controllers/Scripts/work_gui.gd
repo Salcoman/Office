@@ -9,6 +9,7 @@ var preostaloVreme : float = 0
 var has_work_failed : bool = false
 
 signal work_failed
+signal work_work
 
 signal minimize_me
 
@@ -132,6 +133,9 @@ func _on_button_pressed() -> void:
 		confirmation_box6.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings_bad)
+	
+	if counter >= 20:
+		work_work.emit()
 	
 	
 	input_field.text=""

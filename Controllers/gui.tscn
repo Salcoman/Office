@@ -47,5 +47,6 @@ visible = false
 [connection signal="minimize_me" from="SubViewport/Circuit" to="." method="_on_circuit_minimize_me"]
 [connection signal="minimize_me" from="SubViewport/Work" to="." method="_on_work_minimize_me"]
 [connection signal="work_failed" from="SubViewport/Work" to="." method="_on_work_failed"]
+[connection signal="work_work" from="SubViewport/Work" to="." method="_on_work_work"]
 
 [editable path="SubViewport/Desktop"]

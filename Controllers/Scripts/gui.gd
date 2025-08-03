@@ -17,6 +17,7 @@ var last_mouse_pos_3D = null
 var last_mouse_pos_2D = null
 
 signal work_failed
+signal work_work
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("return_to_desktop"):
@@ -124,3 +125,7 @@ func _on_work_minimize_me() -> void:
 
 func _on_work_failed() -> void:
 	work_failed.emit()
+
+
+func _on_work_work() -> void:
+	work_work.emit()

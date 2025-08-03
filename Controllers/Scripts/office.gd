@@ -32,3 +32,9 @@ func _on_player_done_listening() -> void:
 	animation.play_backwards("peek")
 	await animation.animation_finished
 	menadzer2.set_deferred("visible",false)
+
+
+func _on_gui_work_work() -> void:
+	menadzer2.set_deferred("visible",true)
+	animation.play("peek")
+	player.listen_to_this("Work faster, stop messing around and get on with it already.")
