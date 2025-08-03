@@ -1,7 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b6qmfeoihrnpk"]
+[gd_scene load_steps=16 format=3 uid="uid://b6qmfeoihrnpk"]
 
 [ext_resource type="Script" uid="uid://bcf7yepuifll" path="res://Controllers/Scripts/player.gd" id="1_ui7yi"]
 [ext_resource type="PackedScene" uid="uid://b686ecor8bc87" path="res://Controllers/scrolling_dialogue_box.tscn" id="2_5cgdt"]
+[ext_resource type="Texture2D" uid="uid://bhkxpie1lix5w" path="res://Resources/Sprites/torso.png" id="2_7w48v"]
+[ext_resource type="Texture2D" uid="uid://biqiefkkkqcnq" path="res://Resources/Sprites/nogica.png" id="3_33e1e"]
 [ext_resource type="AudioStream" uid="uid://bgsvdhj38ny78" path="res://Resources/audio/switch1.ogg" id="3_cc4ci"]
 [ext_resource type="AudioStream" uid="uid://b2swdgkqa4ux6" path="res://Resources/audio/switch2.ogg" id="4_vgqsu"]
 [ext_resource type="AudioStream" uid="uid://djocxke8nmjmc" path="res://Resources/audio/switch3.ogg" id="5_7w48v"]
@@ -12,7 +14,18 @@
 margin = 0.0
 height = 4.39851
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iw1xq"]
+albedo_texture = ExtResource("2_7w48v")
+uv1_offset = Vector3(0.5, 0, 0)
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ui7yi"]
+material = SubResource("StandardMaterial3D_iw1xq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2j1jm"]
+albedo_texture = ExtResource("3_33e1e")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vu7w4"]
+material = SubResource("StandardMaterial3D_2j1jm")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2j1jm"]
 playback_mode = 1
@@ -36,13 +49,15 @@ shape = SubResource("CapsuleShape3D_e7ebd")
 transform = Transform3D(0.825965, 0, 0, 0, 1.25897, 0, 0, 0, 0.79697, 0, 0.93627, 0)
 mesh = SubResource("CapsuleMesh_ui7yi")
 
-[node name="LEG" type="MeshInstance3D" parent="CollisionShape3D/MeshInstance3D"]
-transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, 0.337194, -1.289, 0)
-mesh = SubResource("CapsuleMesh_ui7yi")
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.463351, 0, 0, 0, 1.48627, 0, 0, 0, 0.322198, 0.270526, -0.670198, 0)
+mesh = SubResource("CapsuleMesh_vu7w4")
+skeleton = NodePath("../MeshInstance3D")
 
-[node name="LEG2" type="MeshInstance3D" parent="CollisionShape3D/MeshInstance3D"]
-transform = Transform3D(0.454487, 0, 0, 0, 1, 0, 0, 0, 0.444725, -0.348, -1.289, 0)
-mesh = SubResource("CapsuleMesh_ui7yi")
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="CollisionShape3D"]
+transform = Transform3D(0.463351, 0, 0, 0, 1.48627, 0, 0, 0, 0.322198, -0.315348, -0.670198, 0)
+mesh = SubResource("CapsuleMesh_vu7w4")
+skeleton = NodePath("../MeshInstance3D")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.815429, -0.531961)
