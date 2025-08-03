@@ -1,17 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcdcwrjyw0w8e"]
+[gd_scene load_steps=10 format=3 uid="uid://bcdcwrjyw0w8e"]
 
 [ext_resource type="PackedScene" uid="uid://d1oe38id0vei8" path="res://Controllers/gui_interface_control.tscn" id="1_80edf"]
 [ext_resource type="Script" uid="uid://b0dx5usbvjq31" path="res://Controllers/Scripts/gui.gd" id="1_cweje"]
+[ext_resource type="Shader" uid="uid://buv3weldntljo" path="res://Controllers/gui.gdshader" id="2_omwjy"]
 [ext_resource type="PackedScene" uid="uid://tb0vv1e74hk6" path="res://Controllers/circuit_track_interface.tscn" id="3_l35td"]
 [ext_resource type="PackedScene" uid="uid://cc652vkdxabww" path="res://Controllers/work_gui.tscn" id="4_1ry7r"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_6lon5"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_omwjy"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8o8l"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_omwjy"]
 resource_local_to_scene = true
-shading_mode = 0
-albedo_texture = SubResource("ViewportTexture_6lon5")
+render_priority = 0
+shader = ExtResource("2_omwjy")
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixel_size = 0.5
+shader_parameter/scanline_strength = 0.2
+shader_parameter/subpixel_strength = 0.6
+shader_parameter/glow_intensity = 0.3
+shader_parameter/albedo_texture = SubResource("ViewportTexture_omwjy")
+shader_parameter/tex_offset = Vector2(0, 0)
+shader_parameter/tex_scale = Vector2(1, 1)
+shader_parameter/tex_rotation_degrees = 0.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_k6omp"]
 
@@ -22,7 +32,7 @@ size = Vector3(1, 1, 0.0556641)
 script = ExtResource("1_cweje")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_q8o8l")
+material_overlay = SubResource("ShaderMaterial_omwjy")
 mesh = SubResource("QuadMesh_k6omp")
 
 [node name="Area3D" type="Area3D" parent="."]
