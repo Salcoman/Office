@@ -46,5 +46,6 @@ visible = false
 [connection signal="pressed" from="SubViewport/Desktop/VBoxContainer/GridContainer/Button5" to="." method="_on_button_5_pressed"]
 [connection signal="minimize_me" from="SubViewport/Circuit" to="." method="_on_circuit_minimize_me"]
 [connection signal="minimize_me" from="SubViewport/Work" to="." method="_on_work_minimize_me"]
+[connection signal="work_failed" from="SubViewport/Work" to="." method="_on_work_failed"]
 
 [editable path="SubViewport/Desktop"]

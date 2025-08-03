@@ -16,6 +16,7 @@ var mouse_inside = false
 var last_mouse_pos_3D = null
 var last_mouse_pos_2D = null
 
+signal work_failed
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("return_to_desktop"):
@@ -119,3 +120,7 @@ func _on_circuit_minimize_me() -> void:
 func _on_work_minimize_me() -> void:
 	desktop.set_deferred("visible",true)
 	work.set_deferred("visible",false)
+
+
+func _on_work_failed() -> void:
+	work_failed.emit()
