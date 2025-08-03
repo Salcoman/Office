@@ -7,6 +7,7 @@ extends CharacterBody3D
 @export var CAMERA_CONTROLLER : Camera3D
 
 @onready var cam = $Camera3D
+@onready var dialogue = $DialogueBox
 
 var _mouse_input: bool = false
 var _mouse_rotation : Vector3 
@@ -18,6 +19,7 @@ var mouse = Vector2()
 var HIGH_MOUSE_SPEED = 10
 var LOW_MOUSE_SPEED = 2
 var current_mouse_speed = HIGH_MOUSE_SPEED
+var player_is_listening = false
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("exit"):
@@ -39,6 +41,7 @@ const JUMP_VELOCITY = 4.5
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
+
 func _update_camera(delta) -> void:
 	_mouse_rotation.x += _tilt_input * delta
 	_mouse_rotation.x = clamp(_mouse_rotation.x,TILT_LOWER_LIMIT,TILT_UPPER_LIMIT)
@@ -54,7 +57,12 @@ func _update_camera(delta) -> void:
 	
 	_rotation_input = 0.0
 	_tilt_input = 0.0
-	
+
+func listen_to_this(text: String):
+	dialogue.set_deferred("visible", true)
+	player_is_listening = true
+	dialogue.read_to_player(text)
+
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("switch_mouse"):
@@ -66,7 +74,7 @@ func _physics_process(delta: float) -> void:
 			current_mouse_speed = HIGH_MOUSE_SPEED
 			
 	#If mouse visible return(prevent movement)
-	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE:
+	if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE or player_is_listening:
 		return
 	
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -88,3 +96,9 @@ func _physics_process(delta: float) -> void:
 	#_update_camera(delta)
 	move_and_slide()
 	mouse = Vector2()
+
+
+func _on_dialogue_box_done_reading() -> void:
+	player_is_listening = false
+	await get_tree().create_timer(5).timeout
+	dialogue.set_deferred("visible", false)
