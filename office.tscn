@@ -209,6 +209,7 @@ skeleton = NodePath("../..")
 
 [node name="Plafon" type="MeshInstance3D" parent="teren"]
 transform = Transform3D(30, 0, 0, 0, 0.15, 0, 0, 0, 30, 0, 9.74778, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_4hetp")
 lod_bias = 0.001
 mesh = SubResource("BoxMesh_s0aar")
@@ -279,7 +280,7 @@ visible = false
 transform = Transform3D(0.955195, 0, 0, 0, 1.74131, 0, 0, 0, 1.74131, -0.136421, 4.31529, 0.303288)
 
 [node name="GUI" parent="predmeti/monitor 3" instance=ExtResource("3_hsito")]
-transform = Transform3D(-4.01708e-08, 0, 0.121, 0, 0.954, 0, -0.919, 0, -5.28908e-09, 0.444051, -0.0889304, -0.0162989)
+transform = Transform3D(-4.01449e-08, 0.0268759, 0.120922, 1.44258e-09, 0.747916, -0.00434525, -0.919, 0, -5.28908e-09, 0.43914, -0.00200558, -0.0162989)
 
 [node name="tastatura" parent="predmeti" instance=ExtResource("10_3xqf3")]
 transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804136, -0.262478, 3.72872, -2.47677)

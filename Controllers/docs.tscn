@@ -1,0 +1,124 @@
+[gd_scene load_steps=11 format=3 uid="uid://f1almogqjp3k"]
+
+[ext_resource type="Texture2D" uid="uid://bjdf4syyf5yx2" path="res://Resources/UI/Icons/information.png" id="1_qem0x"]
+[ext_resource type="Script" uid="uid://cpljfphulkrmo" path="res://Controllers/Scripts/docs.gd" id="1_ys1s4"]
+[ext_resource type="Texture2D" uid="uid://c3lj24klc548o" path="res://Resources/UI/Icons/barsHorizontal.png" id="2_my0x5"]
+[ext_resource type="Texture2D" uid="uid://bxpsynqvayo17" path="res://Resources/UI/Icons/massiveMultiplayer.png" id="3_mb2xj"]
+[ext_resource type="Texture2D" uid="uid://3aog6uim0ofe" path="res://Resources/UI/Icons/menuGrid.png" id="4_ys1s4"]
+[ext_resource type="Texture2D" uid="uid://btwkamnvo7wje" path="res://Resources/UI/Icons/menuList.png" id="5_ay34s"]
+[ext_resource type="Texture2D" uid="uid://dqgsa103b36q0" path="res://Resources/UI/Icons/return.png" id="6_1mje4"]
+[ext_resource type="Texture2D" uid="uid://bvmhr6tqy0xao" path="res://Resources/UI/Icons/door.png" id="7_rkrlj"]
+[ext_resource type="Texture2D" uid="uid://cyadwyshsfw8r" path="res://Resources/UI/work_ui.png" id="8_mb2xj"]
+[ext_resource type="Texture2D" uid="uid://daymta1htqon0" path="res://Resources/UI/work_ui_progress.png" id="9_ys1s4"]
+
+[node name="Docs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ys1s4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 512.0
+offset_bottom = 500.0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="DocsList" type="ItemList" parent="HBoxContainer"]
+custom_minimum_size = Vector2(256, 500)
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 1
+allow_search = false
+item_count = 7
+item_0/text = "Intro"
+item_0/icon = ExtResource("1_qem0x")
+item_1/text = "Sequence UI"
+item_1/icon = ExtResource("2_my0x5")
+item_2/text = "Management"
+item_2/icon = ExtResource("3_mb2xj")
+item_3/text = "Tables"
+item_3/icon = ExtResource("4_ys1s4")
+item_4/text = "Calendar"
+item_4/icon = ExtResource("5_ay34s")
+item_5/text = "Circuit Racer"
+item_5/icon = ExtResource("6_1mje4")
+item_6/text = "Escape"
+item_6/icon = ExtResource("7_rkrlj")
+
+[node name="IntroContainer" type="VBoxContainer" parent="HBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="IntroTitle" type="Label" parent="HBoxContainer/IntroContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Intro"
+
+[node name="IntroText" type="RichTextLabel" parent="HBoxContainer/IntroContainer"]
+custom_minimum_size = Vector2(0, 473)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Hello and welcome to the OOffice Temporal Economy  synchronization and TimeLoop management, also known as ∞ffice Inc. 
+
+Here at The ∞ffice we seek to maintain the integrity of Temporal Economy and Predictive Stock Market by utilizing the Grungal Sequences and Kronnen-Berger Spatial Benders (KBSBs). Once a Grungal Sequence has been correctly entered it will immediately manipulate the randomness of the transdimensional loops throughout the world and maintain the synchronization of Temporal Economy. Your task will be to input these sequences correctly. Remember to pay close attention to the Predictive G.Lists when inputing the sequence otherwise you will accelerate the desynchronization. 
+
+Get to it now! Time's a wasting!"
+
+[node name="SequenceUIContainer" type="ScrollContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="SequenceUISubContainer" type="VBoxContainer" parent="HBoxContainer/SequenceUIContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="SequenceUITitle" type="Label" parent="HBoxContainer/SequenceUIContainer/SequenceUISubContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Sequence UI"
+
+[node name="SequenceUIText" type="RichTextLabel" parent="HBoxContainer/SequenceUIContainer/SequenceUISubContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "This is a short introduction to the Work tool you have been granted. In it you will see the generated numbers on the left and empty fields on the right. Your task is to enter the sequences before hitting the submitt button."
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/SequenceUIContainer/SequenceUISubContainer"]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("8_mb2xj")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="SequenceUIText2" type="RichTextLabel" parent="HBoxContainer/SequenceUIContainer/SequenceUISubContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Below the main UI you will also se the desynchronization progress bar as well as the number of sequences you have succesfully submitted. Here at the ∞ffice we believe in intrinsic reward that the employees will feel once they see the number of succesfull sequences go up."
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer/SequenceUIContainer/SequenceUISubContainer"]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("9_ys1s4")
+expand_mode = 5
+stretch_mode = 5
+
+[connection signal="item_selected" from="HBoxContainer/DocsList" to="." method="_on_docs_list_item_selected"]

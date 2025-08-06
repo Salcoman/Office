@@ -5,6 +5,7 @@ extends Node3D
 @onready var area = $Area3D
 
 @onready var desktop = $SubViewport/Desktop
+@onready var docs = $SubViewport/Docs
 @onready var circuit = $SubViewport/Circuit
 @onready var work = $SubViewport/Work
 
@@ -129,3 +130,8 @@ func _on_work_failed() -> void:
 
 func _on_work_work() -> void:
 	work_work.emit()
+
+
+func _on_button_2_pressed() -> void:
+	desktop.set_deferred("visible",false)
+	docs.set_deferred("visible",true)
