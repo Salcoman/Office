@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://f1almogqjp3k"]
+[gd_scene load_steps=12 format=3 uid="uid://f1almogqjp3k"]
 
 [ext_resource type="Texture2D" uid="uid://bjdf4syyf5yx2" path="res://Resources/UI/Icons/information.png" id="1_qem0x"]
 [ext_resource type="Script" uid="uid://cpljfphulkrmo" path="res://Controllers/Scripts/docs.gd" id="1_ys1s4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bvmhr6tqy0xao" path="res://Resources/UI/Icons/door.png" id="7_rkrlj"]
 [ext_resource type="Texture2D" uid="uid://cyadwyshsfw8r" path="res://Resources/UI/work_ui.png" id="8_mb2xj"]
 [ext_resource type="Texture2D" uid="uid://daymta1htqon0" path="res://Resources/UI/work_ui_progress.png" id="9_ys1s4"]
+[ext_resource type="Texture2D" uid="uid://b2tbjwv8u8ke2" path="res://Resources/UI/manager_docs.png" id="11_ay34s"]
 
 [node name="Docs" type="Control"]
 layout_mode = 3
@@ -120,5 +121,43 @@ layout_mode = 2
 texture = ExtResource("9_ys1s4")
 expand_mode = 5
 stretch_mode = 5
+
+[node name="ManagementContainer" type="ScrollContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="ManagementSubContainer" type="VBoxContainer" parent="HBoxContainer/ManagementContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ManagementTitle" type="Label" parent="HBoxContainer/ManagementContainer/ManagementSubContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Management"
+
+[node name="ManagementText" type="RichTextLabel" parent="HBoxContainer/ManagementContainer/ManagementSubContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "This is your manager, he will come to check in on you while you work to ensure adequate performance. The manager will also perform Employee Correction as well as Employee Enrichment depending on employee performance. "
+fit_content = true
+scroll_active = false
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ManagementContainer/ManagementSubContainer"]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("11_ay34s")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="SequenceUIText2" type="RichTextLabel" parent="HBoxContainer/ManagementContainer/ManagementSubContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Under no circumstance are you to disobey the manager or in any way shape or form disrespect him. This means that once you see that the manager is talking to you, you must immediately drop whatever it is you are doing and listen to him carefully. Once the manager has departed you may return to your work as normal."
+fit_content = true
+scroll_active = false
 
 [connection signal="item_selected" from="HBoxContainer/DocsList" to="." method="_on_docs_list_item_selected"]
