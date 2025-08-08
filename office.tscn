@@ -1,84 +1,21 @@
-[gd_scene load_steps=41 format=3 uid="uid://dds5gpo2llq1c"]
+[gd_scene load_steps=12 format=3 uid="uid://dds5gpo2llq1c"]
 
 [ext_resource type="Script" uid="uid://b2tah0h5jix16" path="res://Controllers/Scripts/office.gd" id="1_70x1r"]
-[ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="1_ei2s5"]
-[ext_resource type="PackedScene" uid="uid://blo5eeb7cuutt" path="res://Models/Monitor.blend" id="2_u8nhc"]
-[ext_resource type="PackedScene" uid="uid://bcdcwrjyw0w8e" path="res://Controllers/gui.tscn" id="3_hsito"]
 [ext_resource type="PackedScene" uid="uid://b6qmfeoihrnpk" path="res://Controllers/player.tscn" id="3_u8nhc"]
 [ext_resource type="PackedScene" uid="uid://p6owiklw22ys" path="res://world_environment.tscn" id="4_43ocd"]
-[ext_resource type="PackedScene" uid="uid://b24h56sfwxg00" path="res://Models/ram_za_sliku.tscn" id="4_knsl5"]
-[ext_resource type="Texture2D" uid="uid://6frpehht0oc2" path="res://Resources/Sprites/upisanplafon_128px.png" id="4_n1y4y"]
-[ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://Models/monitor 3.glb" id="5_lcnwv"]
-[ext_resource type="Texture2D" uid="uid://ru1os3bv1dqr" path="res://Resources/Sprites/walltexture.png" id="7_wruqr"]
-[ext_resource type="Texture2D" uid="uid://dnlom5lgc8wsi" path="res://Resources/Sprites/floor_tiles.png" id="8_wruqr"]
-[ext_resource type="PackedScene" uid="uid://caruk5nvfir0w" path="res://Models/tastatura.blend" id="10_3xqf3"]
+[ext_resource type="PackedScene" uid="uid://wgw5xbtssu66" path="res://Resources/level_geometry.tscn" id="7_8qan1"]
+[ext_resource type="PackedScene" uid="uid://dkf56kuxx312w" path="res://Resources/end_screen_demo.tscn" id="8_wruqr"]
 [ext_resource type="PackedScene" uid="uid://dojdfc42oti4a" path="res://Models/menager_scene.tscn" id="12_knsl5"]
-[ext_resource type="PackedScene" uid="uid://umiqcsx4n0xe" path="res://Models/stolica_scena.tscn" id="12_m8tx5"]
 [ext_resource type="PackedScene" uid="uid://bnuc2i4wg3ghe" path="res://Models/funny_manager_with_anims_2.tscn" id="12_s0aar"]
-[ext_resource type="PackedScene" uid="uid://pxexlh7snqtq" path="res://Models/ram_za_sliku_riba.tscn" id="13_4hetp"]
 [ext_resource type="PackedScene" uid="uid://dkvocwmt5vsp7" path="res://Models/vrata.tscn" id="14_gxl1f"]
-[ext_resource type="Texture2D" uid="uid://bf108ypte6ail" path="res://Resources/Sprites/exit.png" id="14_o3cd7"]
-[ext_resource type="PackedScene" uid="uid://ce0ab6asv2m18" path="res://Models/NEONKA_centrirana.tscn" id="16_m8tx5"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_43ocd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lcwox"]
-albedo_texture = ExtResource("7_wruqr")
-uv1_scale = Vector3(2, 2, 2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_lcnwv"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_wruqr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xqf3"]
-albedo_texture = ExtResource("7_wruqr")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lcwox"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_70x1r"]
-albedo_texture = ExtResource("7_wruqr")
-uv1_scale = Vector3(2, 2, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_3xqf3"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s0aar"]
-albedo_texture = ExtResource("7_wruqr")
-uv1_scale = Vector3(2, 2, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_70x1r"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knsl5"]
-albedo_texture = ExtResource("8_wruqr")
-uv1_scale = Vector3(10, 10, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_s0aar"]
-size = Vector3(2, 2, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4hetp"]
-albedo_texture = ExtResource("4_n1y4y")
-uv1_scale = Vector3(10, 10, 10)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_knsl5"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_s0aar"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gxl1f"]
-size = Vector3(3.919, 2.784, 7.905)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_4hetp"]
-size = Vector3(1.79199, 1.75073, 2.15582)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qan1"]
-albedo_texture = ExtResource("14_o3cd7")
-uv1_scale = Vector3(3.01, 2, 2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_jktts"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2uxut"]
 size = Vector3(1, 1.99121, 1.32178)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n1y4y"]
-size = Vector3(0.755371, 1, 1.06165)
+size = Vector3(6.47119, 8.26782, 7.28324)
 
 [node name="Office" type="Node3D"]
 script = ExtResource("1_70x1r")
@@ -87,220 +24,6 @@ script = ExtResource("1_70x1r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("WorldBoundaryShape3D_43ocd")
-
-[node name="teren" type="Node" parent="."]
-
-[node name="zid" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-0.5, 0, -9.61651e-07, 0, 10, 0, 4.37114e-08, 0, -11, -2.97361, 4.59336, -0.929929)
-material_override = SubResource("StandardMaterial3D_lcwox")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid/StaticBody3D"]
-shape = SubResource("BoxShape3D_wruqr")
-
-[node name="zid2" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-2.18557e-08, 0, 11, 0, 10, 0, -0.5, 0, -4.80825e-07, 2.26821, 4.59336, -6.66826)
-material_override = SubResource("StandardMaterial3D_3xqf3")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid2/StaticBody3D"]
-shape = SubResource("BoxShape3D_lcwox")
-
-[node name="zid4" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-2.18557e-08, 0, -17.5745, 0, 10, 0, 0.5, 0, -7.68207e-07, -1.20793, 4.59336, 9.90604)
-material_override = SubResource("StandardMaterial3D_70x1r")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid4/StaticBody3D"]
-shape = SubResource("BoxShape3D_3xqf3")
-
-[node name="zid3" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 7.49845, 4.59336, 1.6751)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid3/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid10" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 7.49845, 4.59336, 18.484)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid10"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid10/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid11" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 19.5, 4.593, 18.484)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid11"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid11/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid8" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 7.49845, 4.59336, -20.5487)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid8"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid8/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid9" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 17, 19.5, 4.593, -20.549)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid9"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid9/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid12" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-2.18557e-08, 0, 17, 0, 11.3622, 0, -0.5, 0, -7.43094e-07, 14.9797, 4.593, -28.5329)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid12"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid12/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="zid7" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(0.5, 0, 0, 0, 10, 0, 0, 0, 27.046, 19.5, 4.593, -0.889512)
-material_override = SubResource("StandardMaterial3D_s0aar")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid7"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid7/StaticBody3D"]
-shape = SubResource("BoxShape3D_70x1r")
-
-[node name="Pod" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(30, 0, 0, 0, 0.15, 0, 0, 0, 30, 0, -0.417213, 0)
-material_override = SubResource("StandardMaterial3D_knsl5")
-lod_bias = 0.001
-mesh = SubResource("BoxMesh_s0aar")
-skeleton = NodePath("../..")
-
-[node name="Plafon" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(30, 0, 0, 0, 0.15, 0, 0, 0, 30, 0, 9.74778, 0)
-visible = false
-material_override = SubResource("StandardMaterial3D_4hetp")
-lod_bias = 0.001
-mesh = SubResource("BoxMesh_s0aar")
-skeleton = NodePath("../..")
-
-[node name="zid5" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-0.5, 0, -1.92671e-06, 0, 10, 0, 4.37114e-08, 0, -22.039, -9.84776, 4.59336, -0.935254)
-material_override = SubResource("StandardMaterial3D_lcwox")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid5"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid5/StaticBody3D"]
-shape = SubResource("BoxShape3D_knsl5")
-
-[node name="zid6" type="MeshInstance3D" parent="teren"]
-transform = Transform3D(-2.18557e-08, 0, -17.1162, 0, 10, 0, 0.5, 0, -7.48174e-07, -1.12323, 4.59336, -12.0327)
-material_override = SubResource("StandardMaterial3D_70x1r")
-mesh = SubResource("BoxMesh_lcnwv")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="teren/zid6"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="teren/zid6/StaticBody3D"]
-shape = SubResource("BoxShape3D_s0aar")
-
-[node name="VRATA7" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 18.9521, -0.474763, -18.5484)
-
-[node name="VRATA4" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 18.9521, -0.474763, -18.5484)
-
-[node name="VRATA3" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 7.24904, -0.474763, -18.616)
-
-[node name="VRATA5" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 19.3565, -0.474763, -9.49022)
-
-[node name="VRATA6" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 19.3565, -0.474763, -9.49022)
-
-[node name="VRATA8" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 7.41299, -0.474763, 13.4828)
-
-[node name="VRATA9" parent="teren" instance=ExtResource("14_gxl1f")]
-transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 19.1859, -0.474763, 13.4828)
-
-[node name="predmeti" type="Node" parent="."]
-
-[node name="ram za sliku" parent="predmeti" instance=ExtResource("4_knsl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69449, 6.40373, 1.99389)
-
-[node name="Desk" parent="predmeti" instance=ExtResource("1_ei2s5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.443251, -0.334845, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="predmeti/Desk"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="predmeti/Desk/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0968547, 1.88446, 0.00815582)
-shape = SubResource("BoxShape3D_gxl1f")
-
-[node name="Monitor" parent="predmeti" instance=ExtResource("2_u8nhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0391032, 4.49528, 0.274906)
-visible = false
-
-[node name="monitor 3" parent="predmeti" instance=ExtResource("5_lcnwv")]
-transform = Transform3D(0.955195, 0, 0, 0, 1.74131, 0, 0, 0, 1.74131, -0.136421, 4.31529, 0.303288)
-
-[node name="GUI" parent="predmeti/monitor 3" instance=ExtResource("3_hsito")]
-transform = Transform3D(-4.01449e-08, 0.0268759, 0.120922, 1.44258e-09, 0.747916, -0.00434525, -0.919, 0, -5.28908e-09, 0.43914, -0.00200558, -0.0162989)
-
-[node name="tastatura" parent="predmeti" instance=ExtResource("10_3xqf3")]
-transform = Transform3D(0.0804136, 0, -0.236714, 0, 0.25, 0, 0.236714, 0, 0.0804136, -0.262478, 3.72872, -2.47677)
-
-[node name="stolica" parent="predmeti" instance=ExtResource("12_m8tx5")]
-transform = Transform3D(1.06745, 0, 0, 0, 1.42784, 0, 0, 0, 1, 5.60154, 0, 0)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="predmeti/stolica"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="predmeti/stolica/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11377, 0.375366, 0.0403748)
-shape = SubResource("BoxShape3D_4hetp")
-
-[node name="ram za sliku2" parent="predmeti" instance=ExtResource("13_4hetp")]
-transform = Transform3D(0.0308256, 2.85274, -0.394139, 0.222433, -0.395343, -2.84405, -2.87123, 2.30019e-08, -0.224559, 1.37323, 6.97815, 9.52433)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="predmeti"]
-transform = Transform3D(0.212206, 0, 0, 0, 1.09618, 0, 0, 0, 3.07997, 18.7264, 7.80972, -7.38603)
-material_override = SubResource("StandardMaterial3D_8qan1")
-mesh = SubResource("BoxMesh_jktts")
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("4_43ocd")]
 
@@ -362,57 +85,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66165, 0, -9.7457)
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 4.66157, 0.482666)
 shape = SubResource("BoxShape3D_2uxut")
 
-[node name="svetla" type="Node" parent="."]
-
-[node name="NEONKA" parent="svetla" instance=ExtResource("16_m8tx5")]
-transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 3.03424, 9.43578, 0)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="svetla/NEONKA"]
-transform = Transform3D(-4.37114e-08, -8.74228e-08, 1, 0, -1, -8.74228e-08, 1, -3.82137e-15, 4.37114e-08, 1.09292, 0.526274, -0.276802)
-light_energy = 0.418
-shadow_enabled = true
-omni_range = 10.69
-omni_attenuation = 0.191
-
-[node name="NEONKA4" parent="svetla" instance=ExtResource("16_m8tx5")]
-transform = Transform3D(1, -8.74228e-08, 0, -8.74228e-08, -1, -3.82137e-15, 0, 3.82137e-15, -1, -3.31981, 9.43578, -9.89539)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="svetla/NEONKA4"]
-transform = Transform3D(-4.37114e-08, -8.74228e-08, 1, 0, -1, -8.74228e-08, 1, -3.82137e-15, 4.37114e-08, 1.09292, 0.526274, -0.276802)
-light_energy = 0.418
-shadow_enabled = true
-omni_range = 10.69
-omni_attenuation = 0.191
-
-[node name="NEONKA2" parent="svetla" instance=ExtResource("16_m8tx5")]
-transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 13.7206, 9.43578, 0)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="svetla/NEONKA2"]
-transform = Transform3D(-4.37114e-08, -8.74228e-08, 1, 0, -1, -8.74228e-08, 1, -3.82137e-15, 4.37114e-08, 1.09292, 0.526274, -0.276802)
-light_energy = 0.418
-shadow_enabled = true
-omni_range = 10.69
-omni_attenuation = 0.191
-
-[node name="NEONKA3" parent="svetla" instance=ExtResource("16_m8tx5")]
-transform = Transform3D(-4.37114e-08, 0, 1, -8.74228e-08, -1, -3.82137e-15, 1, -8.74228e-08, 4.37114e-08, 13.7206, 9.43578, 20.6734)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="svetla/NEONKA3"]
-transform = Transform3D(-4.37114e-08, -8.74228e-08, 1, 0, -1, -8.74228e-08, 1, -3.82137e-15, 4.37114e-08, 1.09292, 0.526274, -0.276802)
-light_energy = 0.418
-shadow_enabled = true
-omni_range = 10.69
-omni_attenuation = 0.191
-
 [node name="ExitGame" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3382, 2.52539, 4.62313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5328, 2.52539, 57.8846)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExitGame"]
-transform = Transform3D(9.8, 0, 0, 0, 7, 0, 0, 0, 14, 0.667114, 0, 0.340957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47241, 0, 2.37212)
 shape = SubResource("BoxShape3D_n1y4y")
 
-[connection signal="work_failed" from="predmeti/monitor 3/GUI" to="." method="_on_work_failed"]
-[connection signal="work_work" from="predmeti/monitor 3/GUI" to="." method="_on_gui_work_work"]
+[node name="LevelGeometry" parent="." instance=ExtResource("7_8qan1")]
+
+[node name="Control" parent="." instance=ExtResource("8_wruqr")]
+visible = false
+
 [connection signal="done_listening" from="Player" to="." method="_on_player_done_listening"]
 [connection signal="next_letter" from="Player/DialogueBox" to="." method="_on_dialogue_box_next_letter"]
 [connection signal="animation_finished" from="TheMenager/funny manager with anims2/AnimationPlayer2" to="." method="_on_animation_player_2_animation_finished"]
@@ -420,8 +104,6 @@ shape = SubResource("BoxShape3D_n1y4y")
 [connection signal="body_exited" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_exited"]
 [connection signal="body_entered" from="ExitGame" to="." method="_on_exit_game_body_entered"]
 
-[editable path="predmeti/Desk"]
-[editable path="predmeti/Monitor"]
 [editable path="Player"]
 [editable path="TheMenager/funny manager with anims2"]
 [editable path="menadzer"]

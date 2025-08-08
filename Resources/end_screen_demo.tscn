@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkf56kuxx312w"]
+
+[ext_resource type="Texture2D" uid="uid://006qntctwlaj" path="res://Resources/UI/manager_despair.png" id="1_t0dqu"]
+[ext_resource type="LabelSettings" uid="uid://dfarfj18qcpn3" path="res://Resources/ugly_label_settings_bad.tres" id="2_8t3yf"]
+[ext_resource type="LabelSettings" uid="uid://kq6kb3fi07qg" path="res://Resources/ugly_label_settings.tres" id="3_ykily"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_t0dqu")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -323.5
+offset_top = 20.0
+offset_right = 323.5
+offset_bottom = 43.0
+grow_horizontal = 2
+text = "An exit is just an entrance flipped on its axis! One office is just a pipeline to another."
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_right = 40.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "WHERE IS THE EXIT WHERE IS THE EXIT WHEREISTHEEXIT
+EXITEXITEXITEXIT"
+label_settings = ExtResource("2_8t3yf")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "THE SEQUENCE IS THE KEY! IT HAS TO BE!
+GRUNGAL TEMPORAL MANIPULATION CAN GET US OUT
+WE HAVE TO RETURN TO WORK! 
+WORKWORKWORKWORK"
+label_settings = ExtResource("3_ykily")

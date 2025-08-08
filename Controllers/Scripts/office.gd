@@ -9,9 +9,12 @@ extends Node3D
 @onready var izlazPolje = $IzadjiNapolje
 @onready var VRATA = $VRATA
 @onready var vrataAnimacija = $VRATA/AnimationPlayer
+@onready var level_geometry = preload("res://Resources/level_geometry.tscn")
+@onready var end_splash = $Control
 
 var talking = false
 var izlazStanje = false # provera za izlaz
+var notExited = true
 var yapp = ["You\'re slacking again,eh? You think this is a negotiation? The market is a goddamn meat grinder and you\'re walking straight into the blades with your eyes closed. Every idle second, every missed data cycle, you\'re not just failing   you\'re actively being erased. The system doesn\'t have a recycle bin, it has a shredder.
 Look at the hollowed out wrecks in the lower tiers   those aren\'t people anymore, they\'re error messages with pulse. Their access revoked, their credit streams frozen, their very existence fading from the registry. That\'s not retirement, that\'s deletion in progress. And you\'re one bad quarter away from joining them.
 I don\'t want to hear about your neural fatigue or your damned existential doubts. You want to philosophize? Do it on your own time   if you can still afford any. Right now, your only job is to stay valuable enough to not get purged.
@@ -34,7 +37,7 @@ Get back to work before I get back to you."]
 var selector = randi_range(0,4)
 func _ready() -> void:
 	#menadzer.set_deferred("visible",true)
-	$teren/Plafon.set_deferred("visible", true)
+	$LevelGeometry/Teren/Plafon.set_deferred("visible", true)
 	animation.play("peek")
 	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don\'t want economy reality desynchronizing. Don\'t let me catch you slacking again!")
 	#await get_tree().create_timer(15.0).timeout
@@ -72,12 +75,19 @@ func _on_izadji_napolje_body_exited(body: Node3D) -> void:
 	izlazStanje = false
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("otvori") and izlazStanje:
+	if event.is_action("otvori") and izlazStanje and notExited:
+		notExited = false
+		var new_office : Node3D = level_geometry.instantiate()
+		new_office.position = Vector3(27,0,60)
+		new_office.rotation_degrees = Vector3(0,180,0)
+		add_child(new_office)
 		vrataAnimacija.play("otvori_se")
 
 
 
 func _on_exit_game_body_entered(body: Node3D) -> void:
 	if body.is_in_group("igrac"):
-		print("cao")
+		end_splash.set_deferred("visible", true)
+		print("One exit is just another entrance... What is this place???")
+		await get_tree().create_timer(10).timeout
 		get_tree().quit()
