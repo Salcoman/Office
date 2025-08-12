@@ -1,12 +1,12 @@
 extends Control
 
-var counter : int = 0
 var ugly_label_settings : LabelSettings = preload("res://Resources/ugly_label_settings.tres")
 var ugly_label_settings_bad : LabelSettings = preload("res://Resources/ugly_label_settings_bad.tres")
 var startTime : int = 0
 var broj : float = 0
 var preostaloVreme : float = 0
 var has_work_failed : bool = false
+var twenty_submissions_event : bool = true
 
 signal work_failed
 signal work_work
@@ -73,7 +73,7 @@ func _on_button_pressed() -> void:
 	if generated_number.text == input_field.text:
 		confirmation_box.set_deferred("text", "Good.")
 		confirmation_box.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -84,7 +84,7 @@ func _on_button_pressed() -> void:
 	if generated_number2.text == input_field2.text:
 		confirmation_box2.set_deferred("text", "Good.")
 		confirmation_box2.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number2.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -95,7 +95,7 @@ func _on_button_pressed() -> void:
 	if generated_number3.text == input_field3.text:
 		confirmation_box3.set_deferred("text", "Good.")
 		confirmation_box3.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number3.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -106,7 +106,7 @@ func _on_button_pressed() -> void:
 	if generated_number4.text == input_field4.text:
 		confirmation_box4.set_deferred("text", "Good.")
 		confirmation_box4.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number4.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -117,7 +117,7 @@ func _on_button_pressed() -> void:
 	if generated_number5.text == input_field5.text:
 		confirmation_box5.set_deferred("text", "Good.")
 		confirmation_box5.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number5.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -128,7 +128,7 @@ func _on_button_pressed() -> void:
 	if generated_number6.text == input_field6.text:
 		confirmation_box6.set_deferred("text", "Good.")
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings)
-		counter += 1
+		GlobalVariables.correct_submissions += 1
 		generated_number6.set_deferred("text", randi_range(100000000,999999999))
 		_smanjiVreme(-5.0)
 	else:
@@ -136,8 +136,9 @@ func _on_button_pressed() -> void:
 		_smanjiVreme(15.0)
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings_bad)
 	
-	if counter >= 20:
+	if GlobalVariables.correct_submissions >= 20 and twenty_submissions_event:
 		work_work.emit()
+		twenty_submissions_event = false
 	
 	
 	input_field.text=""
@@ -147,7 +148,7 @@ func _on_button_pressed() -> void:
 	input_field5.text=""
 	input_field6.text=""
 	
-	$Label.set_deferred("text", "Completed no. of entries: " + str(counter))
+	$Label.set_deferred("text", "Completed no. of entries: " + str(GlobalVariables.correct_submissions))
 	
 	
 

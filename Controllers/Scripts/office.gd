@@ -42,7 +42,8 @@ func _ready() -> void:
 	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don\'t want economy reality desynchronizing. Don\'t let me catch you slacking again!")
 	#await get_tree().create_timer(15.0).timeout
 	#animation.play_backwards("peek")
-	
+	var gui = get_node("LevelGeometry/Predmeti/monitor 3/GUI")
+	gui.work_work.connect(_on_gui_work_work)
 
 
 func _on_dialogue_box_next_letter() -> void:
