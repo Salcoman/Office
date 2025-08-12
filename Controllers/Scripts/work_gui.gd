@@ -136,7 +136,7 @@ func _on_button_pressed() -> void:
 		_smanjiVreme(15.0)
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings_bad)
 	
-	if GlobalVariables.correct_submissions >= 20 and twenty_submissions_event:
+	if GlobalVariables.correct_submissions >= 2 and twenty_submissions_event:
 		work_work.emit()
 		twenty_submissions_event = false
 	

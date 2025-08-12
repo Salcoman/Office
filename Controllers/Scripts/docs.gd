@@ -3,7 +3,15 @@ extends Control
 @onready var intro : VBoxContainer = $HBoxContainer/IntroContainer
 @onready var sequence : ScrollContainer = $HBoxContainer/SequenceUIContainer
 @onready var manager : ScrollContainer = $HBoxContainer/ManagementContainer
+@onready var items : ItemList = $HBoxContainer/DocsList
+@onready var escape_icon : Texture2D = preload("res://Resources/UI/Icons/door.png")
 
+func _ready() -> void:
+	var gui = get_parent().get_parent()
+	gui.work_work.connect(_on_gui_work_work)
+
+func _on_gui_work_work() -> void:
+	items.add_item("Escape", escape_icon, true)
 
 func _on_docs_list_item_selected(index: int) -> void:
 	match index:

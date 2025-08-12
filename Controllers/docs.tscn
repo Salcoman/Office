@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://f1almogqjp3k"]
+[gd_scene load_steps=11 format=3 uid="uid://f1almogqjp3k"]
 
 [ext_resource type="Texture2D" uid="uid://bjdf4syyf5yx2" path="res://Resources/UI/Icons/information.png" id="1_qem0x"]
 [ext_resource type="Script" uid="uid://cpljfphulkrmo" path="res://Controllers/Scripts/docs.gd" id="1_ys1s4"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://3aog6uim0ofe" path="res://Resources/UI/Icons/menuGrid.png" id="4_ys1s4"]
 [ext_resource type="Texture2D" uid="uid://btwkamnvo7wje" path="res://Resources/UI/Icons/menuList.png" id="5_ay34s"]
 [ext_resource type="Texture2D" uid="uid://dqgsa103b36q0" path="res://Resources/UI/Icons/return.png" id="6_1mje4"]
-[ext_resource type="Texture2D" uid="uid://bvmhr6tqy0xao" path="res://Resources/UI/Icons/door.png" id="7_rkrlj"]
 [ext_resource type="Texture2D" uid="uid://cyadwyshsfw8r" path="res://Resources/UI/work_ui.png" id="8_mb2xj"]
 [ext_resource type="Texture2D" uid="uid://daymta1htqon0" path="res://Resources/UI/work_ui_progress.png" id="9_ys1s4"]
 [ext_resource type="Texture2D" uid="uid://b2tbjwv8u8ke2" path="res://Resources/UI/manager_docs.png" id="11_ay34s"]
@@ -39,7 +38,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 focus_mode = 1
 allow_search = false
-item_count = 7
+item_count = 6
 item_0/text = "Intro"
 item_0/icon = ExtResource("1_qem0x")
 item_1/text = "Sequence UI"
@@ -52,8 +51,6 @@ item_4/text = "Calendar"
 item_4/icon = ExtResource("5_ay34s")
 item_5/text = "Circuit Racer"
 item_5/icon = ExtResource("6_1mje4")
-item_6/text = "Escape"
-item_6/icon = ExtResource("7_rkrlj")
 
 [node name="IntroContainer" type="VBoxContainer" parent="HBoxContainer"]
 clip_contents = true

@@ -40,6 +40,7 @@ func _ready() -> void:
 	$LevelGeometry/Teren/Plafon.set_deferred("visible", true)
 	animation.play("peek")
 	player.listen_to_this("Have you finished entering temporal Grungal sequences? We don\'t want economy reality desynchronizing. Don\'t let me catch you slacking again!")
+	#player.listen_to_this("Dev")
 	#await get_tree().create_timer(15.0).timeout
 	#animation.play_backwards("peek")
 	var gui = get_node("LevelGeometry/Predmeti/monitor 3/GUI")
