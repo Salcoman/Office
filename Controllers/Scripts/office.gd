@@ -14,6 +14,7 @@ extends Node3D
 
 var talking = false
 var izlazStanje = false # provera za izlaz
+var near_exit = false
 var notExited = true
 var yapp = ["You\'re slacking again,eh? You think this is a negotiation? The market is a goddamn meat grinder and you\'re walking straight into the blades with your eyes closed. Every idle second, every missed data cycle, you\'re not just failing   you\'re actively being erased. The system doesn\'t have a recycle bin, it has a shredder.
 Look at the hollowed out wrecks in the lower tiers   those aren\'t people anymore, they\'re error messages with pulse. Their access revoked, their credit streams frozen, their very existence fading from the registry. That\'s not retirement, that\'s deletion in progress. And you\'re one bad quarter away from joining them.
@@ -84,6 +85,9 @@ func _input(event: InputEvent) -> void:
 		new_office.rotation_degrees = Vector3(0,180,0)
 		add_child(new_office)
 		vrataAnimacija.play("otvori_se")
+		
+	elif event.is_action("otvori") and near_exit and GlobalVariables.escape_possible:
+		get_tree().quit()
 
 
 
@@ -93,3 +97,14 @@ func _on_exit_game_body_entered(body: Node3D) -> void:
 		print("One exit is just another entrance... What is this place???")
 		await get_tree().create_timer(10).timeout
 		get_tree().quit()
+
+
+
+func _on_level_geometry_exit_exited(body: Node3D) -> void:
+	if body.is_in_group("igrac"):
+		near_exit = false
+
+
+func _on_level_geometry_entered(body: Node3D) -> void:
+	if body.is_in_group("igrac"):
+		near_exit = true

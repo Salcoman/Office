@@ -135,6 +135,9 @@ func _on_button_pressed() -> void:
 		confirmation_box6.set_deferred("text", "Bad.")
 		_smanjiVreme(15.0)
 		confirmation_box6.set_deferred("label_settings",ugly_label_settings_bad)
+		
+	if input_field.text == "111111111" and input_field2.text == "222222222" and input_field3.text == "333333333" and input_field4.text == "444444444" and input_field5.text == "555555555" and input_field6.text == "666666666":
+		GlobalVariables.escape_possible = true
 	
 	if GlobalVariables.correct_submissions >= 2 and twenty_submissions_event:
 		work_work.emit()

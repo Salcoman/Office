@@ -1,6 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://wgw5xbtssu66"]
+[gd_scene load_steps=37 format=3 uid="uid://wgw5xbtssu66"]
 
 [ext_resource type="PackedScene" uid="uid://ce0ab6asv2m18" path="res://Models/NEONKA_centrirana.tscn" id="1_op1vd"]
+[ext_resource type="Script" uid="uid://dk37jtsy86x8h" path="res://Resources/level_geometry.gd" id="1_wgq27"]
 [ext_resource type="PackedScene" uid="uid://b24h56sfwxg00" path="res://Models/ram_za_sliku.tscn" id="2_wgq27"]
 [ext_resource type="PackedScene" uid="uid://b3vtyimjjnxum" path="res://Models/Desk.blend" id="3_6gk8e"]
 [ext_resource type="PackedScene" uid="uid://bnbeimcd7rpko" path="res://Models/monitor 3.glb" id="4_4hlv0"]
@@ -84,7 +85,11 @@ uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s0aar"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_op1vd"]
+size = Vector3(4.26807, 7.18994, 6.0498)
+
 [node name="LevelGeometry" type="Node3D"]
+script = ExtResource("1_wgq27")
 
 [node name="Svetla" type="Node3D" parent="."]
 
@@ -341,6 +346,16 @@ transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114
 
 [node name="VRATA9" parent="Teren" instance=ExtResource("14_pldu6")]
 transform = Transform3D(-5.27033e-08, 0, 1, 0, 1.21178, 0, -1.20571, 0, -4.37114e-08, 19.1859, -0.474763, 13.4828)
+
+[node name="ExitArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8233, 0, -7.78245)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExitArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.613375, 3.09497, -0.413086)
+shape = SubResource("BoxShape3D_op1vd")
+
+[connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_exited" from="ExitArea" to="." method="_on_exit_area_body_exited"]
 
 [editable path="Predmeti/Desk"]
 [editable path="Predmeti/monitor 3/GUI"]

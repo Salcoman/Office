@@ -157,4 +157,32 @@ text = "Under no circumstance are you to disobey the manager or in any way shape
 fit_content = true
 scroll_active = false
 
+[node name="ExitContainer" type="VBoxContainer" parent="HBoxContainer"]
+visible = false
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ExitTitle" type="Label" parent="HBoxContainer/ExitContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Get out!!!"
+
+[node name="ExitText" type="RichTextLabel" parent="HBoxContainer/ExitContainer"]
+custom_minimum_size = Vector2(0, 473)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "There is only one way out... Enter the following sequence:
+
+111111111
+222222222
+333333333
+444444444
+555555555
+666666666
+
+Then stand up, stand in front of an exit sign... Press E... Save yourself!"
+
 [connection signal="item_selected" from="HBoxContainer/DocsList" to="." method="_on_docs_list_item_selected"]

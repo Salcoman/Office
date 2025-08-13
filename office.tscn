@@ -103,6 +103,8 @@ visible = false
 [connection signal="body_entered" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_entered"]
 [connection signal="body_exited" from="IzadjiNapolje" to="." method="_on_izadji_napolje_body_exited"]
 [connection signal="body_entered" from="ExitGame" to="." method="_on_exit_game_body_entered"]
+[connection signal="entered" from="LevelGeometry" to="." method="_on_level_geometry_entered"]
+[connection signal="exited" from="LevelGeometry" to="." method="_on_level_geometry_exit_exited"]
 
 [editable path="Player"]
 [editable path="TheMenager/funny manager with anims2"]
